@@ -40,7 +40,7 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
@@ -80,7 +80,7 @@ const Testimonials = () => {
                     : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-800 shadow-2xl">
+                <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-primary shadow-2xl shadow-primary/20">
                   <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center transform rotate-12">
                     <Quote className="w-8 h-8 text-white transform -rotate-12" />
                   </div>
@@ -93,7 +93,7 @@ const Testimonials = () => {
                     "{testimonial.text}"
                   </p>
 
-                  <div className="pt-6 border-t border-gray-800">
+                  <div className="pt-6 border-t border-gray-700/50">
                     <p className="text-white font-semibold text-xl mb-1">
                       {testimonial.name}
                     </p>
