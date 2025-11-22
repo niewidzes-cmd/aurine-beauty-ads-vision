@@ -28,7 +28,7 @@ const Hero = () => {
             </h1>
             <p className="text-xl text-white/70 mb-8 max-w-xl">
               Pomagamy salonom kosmetycznym i beauty przyciągnąć więcej klientek
-              przez Facebook i Instagram. Bez kombinowania, bez tajemnic.
+              przez Facebook i Instagram. Profesjonalnie, przejrzyście i skutecznie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button

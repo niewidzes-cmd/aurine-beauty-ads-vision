@@ -5,30 +5,30 @@ const Process = () => {
     {
       icon: MessageSquare,
       number: "01",
-      title: "Gadamy o Twoim salonie",
+      title: "Konsultacja i strategia",
       description:
-        "Poznajemy się, opowiadasz nam o swoim biznesie i klientkach. Wspólnie ustalamy, co chcesz osiągnąć.",
+        "Poznajemy Twój biznes, cele oraz grupę docelową. Opracowujemy strategię kampanii dopasowaną do Twoich potrzeb i budżetu.",
     },
     {
       icon: Palette,
       number: "02",
-      title: "Robimy ładne reklamy",
+      title: "Kreacje reklamowe",
       description:
-        "Przygotowujemy grafiki i teksty, które przyciągną uwagę. Pokażemy Ci je zanim cokolwiek ruszymy.",
+        "Projektujemy profesjonalne reklamy z atrakcyjnymi grafikami i przekonującymi tekstami, które wyróżnią Twój salon.",
     },
     {
       icon: Rocket,
       number: "03",
-      title: "Włączamy kampanię",
+      title: "Uruchomienie kampanii",
       description:
-        "Ustawiamy wszystko na Facebooku i Instagramie, żeby reklamy trafiały do właściwych osób z Twojego miasta.",
+        "Konfigurujemy kampanie z precyzyjnym targetowaniem i uruchamiamy je na Facebook Ads Manager.",
     },
     {
       icon: LineChart,
       number: "04",
-      title: "Dbamy o wyniki",
+      title: "Optymalizacja i raportowanie",
       description:
-        "Sprawdzamy codziennie co działa i co można poprawić. Co miesiąc pokazujemy Ci dokładne wyniki.",
+        "Na bieżąco monitorujemy wyniki, optymalizujemy budżet i dostarczamy przejrzyste raporty z rekomendacjami.",
     },
   ];
 
