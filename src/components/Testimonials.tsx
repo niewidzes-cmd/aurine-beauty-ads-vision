@@ -110,7 +110,7 @@ const Testimonials = () => {
                     : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-700/50 shadow-2xl">
+                <div className="bg-gradient-to-br from-[#2a1a1f] via-[#1f1519] to-[#2a1a1f] backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-[#3a2a2f]/50 shadow-2xl">
                   <div className="flex justify-center items-center gap-1 mb-8">
                     {renderStars(testimonial.rating)}
                   </div>
