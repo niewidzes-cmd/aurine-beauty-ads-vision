@@ -80,12 +80,12 @@ const Testimonials = () => {
                     : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-primary shadow-2xl shadow-primary/20">
+                <div className="relative bg-gradient-to-br from-gray-900/80 via-gray-900/60 to-black/70 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-primary/80 shadow-2xl shadow-primary/20">
                   <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center transform rotate-12">
                     <Quote className="w-8 h-8 text-white transform -rotate-12" />
                   </div>
 
-                  <div className="flex items-center gap-1 mb-6 mt-4">
+                  <div className="flex items-center justify-center gap-1 mb-6 mt-4">
                     {renderStars(testimonial.rating)}
                   </div>
 
