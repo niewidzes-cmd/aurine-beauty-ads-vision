@@ -4,27 +4,27 @@ const Services = () => {
   const services = [
     {
       icon: Target,
-      title: "Trafiamy do prawdziwych klientek",
+      title: "Precyzyjne targetowanie",
       description:
-        "Pokazujemy Twoje reklamy kobietom z Twojego miasta, które szukają takich usług jak Ty oferujesz.",
+        "Docieramy do potencjalnych klientek z Twojego regionu, które są zainteresowane usługami beauty. Trafiamy w odpowiedni wiek, lokalizację i zainteresowania.",
     },
     {
       icon: TrendingUp,
-      title: "Pilnujemy Twojego budżetu",
+      title: "Optymalizacja kampanii",
       description:
-        "Na bieżąco sprawdzamy co działa najlepiej i dbamy, żebyś płaciła tylko za to, co przynosi efekty.",
+        "Systematycznie analizujemy wyniki i wprowadzamy poprawki, aby maksymalizować efektywność każdej wydanej złotówki. Każdy krok jest przemyślany.",
     },
     {
       icon: Sparkles,
-      title: "Ładne reklamy",
+      title: "Profesjonalne kreacje",
       description:
-        "Robimy takie grafiki i teksty, żeby klientki chciały zatrzymać się i kliknąć. Bez zbędnego kombinowania.",
+        "Tworzymy atrakcyjne wizualnie reklamy z dopracowanymi tekstami, które wyróżniają się w feedzie i skutecznie przyciągają uwagę.",
     },
     {
       icon: Users,
-      title: "Wiesz co się dzieje",
+      title: "Przejrzyste raportowanie",
       description:
-        "Co miesiąc dostaniesz jasny raport - ile osób widziało reklamy, ile dzwoniło, ile przyszło. Wszystko na prostą.",
+        "Co miesiąc otrzymujesz szczegółowy raport z wynikami kampanii i rekomendacjami. Zawsze wiesz dokładnie, za co płacisz i jakie efekty osiągasz.",
     },
   ];
 

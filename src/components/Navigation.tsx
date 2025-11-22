@@ -57,6 +57,12 @@ const Navigation = () => {
               Jak to działa
             </button>
             <button
+              onClick={() => scrollToSection("about")}
+              className="text-white/80 hover:text-primary transition-colors"
+            >
+              O nas
+            </button>
+            <button
               onClick={() => scrollToSection("testimonials")}
               className="text-white/80 hover:text-primary transition-colors"
             >
@@ -101,6 +107,12 @@ const Navigation = () => {
               className="text-white text-xl hover:text-primary transition-colors text-left"
             >
               Jak to działa
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-white text-xl hover:text-primary transition-colors text-left"
+            >
+              O nas
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
