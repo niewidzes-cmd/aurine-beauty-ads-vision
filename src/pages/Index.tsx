@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
-import AboutUs from "@/components/AboutUs";
+import CaseStudies from "@/components/CaseStudies";
 import Results from "@/components/Results";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -14,9 +15,10 @@ const Index = () => {
     <div className="min-h-screen bg-black">
       <Navigation />
       <Hero />
+      <AboutUs />
       <Services />
       <Process />
-      <AboutUs />
+      <CaseStudies />
       <Results />
       <Testimonials />
       <FAQ />
