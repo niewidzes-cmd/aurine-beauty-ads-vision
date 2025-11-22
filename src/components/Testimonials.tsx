@@ -90,7 +90,7 @@ const Testimonials = () => {
                       : 'lg:scale-90 opacity-75'
                   }`}
                 >
-                  <div className={`relative bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 ${
+                  <div className={`relative bg-black/90 backdrop-blur-sm rounded-3xl p-8 border transition-all duration-500 ${
                     isMain 
                       ? 'border-primary shadow-2xl shadow-primary/20' 
                       : 'border-gray-700/50 hover:border-primary/30'
