@@ -66,9 +66,9 @@ const Testimonials = () => {
 
   return (
     <section className="py-20 bg-gradient-to-b from-black via-gray-900 to-black relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-purple-600/40 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-pink-600/40 rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-purple-600/50 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-pink-600/50 rounded-full blur-[120px]"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -110,20 +110,20 @@ const Testimonials = () => {
                     : "opacity-0 translate-x-full"
                 }`}
               >
-                <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl p-8 md:p-12 border border-gray-800">
+                <div className="bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-gray-700/50 shadow-2xl">
                   <div className="flex justify-center items-center gap-1 mb-8">
                     {renderStars(testimonial.rating)}
                   </div>
 
-                  <p className="text-gray-300 mb-10 text-lg md:text-xl leading-relaxed text-center max-w-3xl mx-auto">
+                  <p className="text-gray-200 mb-10 text-lg md:text-xl leading-relaxed text-center max-w-3xl mx-auto">
                     "{testimonial.text}"
                   </p>
 
-                  <div className="text-center pt-8 border-t border-gray-700/50">
+                  <div className="text-center pt-8 border-t border-gray-600/30">
                     <p className="text-white font-semibold text-xl mb-1">
                       {testimonial.name}
                     </p>
-                    <p className="text-gray-500 text-sm">
+                    <p className="text-gray-400 text-sm">
                       {testimonial.business}
                     </p>
                   </div>
