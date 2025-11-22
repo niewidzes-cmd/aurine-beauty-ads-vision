@@ -1,7 +1,8 @@
 import { Phone } from "lucide-react";
 
 const WhatsAppButton = () => {
-  const whatsappUrl = "https://wa.me/48731856524";
+  const message = encodeURIComponent("Cześć! Chciałabym dowiedzieć się więcej o kampaniach reklamowych dla mojego salonu.");
+  const whatsappUrl = `https://wa.me/48731856524?text=${message}`;
 
   return (
     <a
