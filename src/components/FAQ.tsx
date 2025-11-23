@@ -45,16 +45,16 @@ const FAQ = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full" />
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in px-5 sm:px-4">
+          <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-4">
             Najczęstsze <span className="text-gradient-pink">pytania</span>
           </h2>
-          <p className="text-xl text-white/60 max-w-2xl mx-auto">
+          <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
             Odpowiadamy na to, co Cię może nurtować
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto space-y-4 px-5 sm:px-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -63,9 +63,9 @@ const FAQ = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-5 sm:p-6 text-left"
               >
-                <span className="text-lg font-semibold text-white pr-4">
+                <span className="text-[1.0625rem] leading-tight sm:text-lg font-semibold text-white pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
@@ -75,7 +75,7 @@ const FAQ = () => {
                 />
               </button>
               {openIndex === index && (
-                <div className="px-6 pb-6 text-white/70 leading-relaxed animate-fade-in">
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-[0.9375rem] leading-[1.6] sm:text-base text-white/70">
                   {faq.answer}
                 </div>
               )}
@@ -83,8 +83,8 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-white/60 mb-4">Masz inne pytanie?</p>
+        <div className="mt-12 text-center px-5 sm:px-4">
+          <p className="text-white/60 mb-4 text-sm sm:text-base">Masz inne pytanie?</p>
           <button
             onClick={() => {
               const element = document.getElementById("contact");
