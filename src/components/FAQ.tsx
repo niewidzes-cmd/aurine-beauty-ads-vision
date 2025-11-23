@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const { ref, isVisible } = useScrollAnimation();
 
   const faqs = [
