@@ -20,7 +20,7 @@ const AboutUs = () => {
             w <span className="text-gradient-pink">małych miastach</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Wiemy, jak to jest prowadzić salon poza dużym miastem. Pomagamy właścicielkom salonów fryzjerskich, kosmetycznych, SPA i gabinetów medycyny estetycznej przyciągnąć klientki z okolicy – szczerze, bez obietnic bez pokrycia.
+            Wiemy, jak to jest prowadzić biznes poza dużym miastem. Pomagamy właścicielkom biznesów beauty przyciągnąć klientki z okolicy – szczerze, bez obietnic bez pokrycia.
           </p>
         </div>
 
