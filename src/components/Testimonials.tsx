@@ -75,27 +75,27 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-2 sm:px-4"
+                  className="w-full flex-shrink-0 px-2 sm:px-4 flex justify-center"
                 >
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12">
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-7 md:p-10 max-w-sm w-full">
                     {/* Stars */}
-                    <div className="flex gap-1 mb-4 sm:mb-6 justify-center">
+                    <div className="flex gap-1 mb-3 sm:mb-4 justify-center">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
                       ))}
                     </div>
 
                     {/* Review text */}
-                    <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 leading-relaxed text-center">
+                    <p className="text-sm sm:text-base md:text-lg text-white/90 mb-5 sm:mb-6 leading-relaxed text-center">
                       "{testimonial.text}"
                     </p>
 
                     {/* Author */}
-                    <div className="text-center border-t border-white/10 pt-4 sm:pt-6">
-                      <div className="font-semibold text-white text-base sm:text-lg">
+                    <div className="text-center border-t border-white/10 pt-3 sm:pt-4">
+                      <div className="font-semibold text-white text-sm sm:text-base">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm sm:text-base text-white/60">{testimonial.business}</div>
+                      <div className="text-xs sm:text-sm text-white/60">{testimonial.business}</div>
                     </div>
                   </div>
                 </div>
