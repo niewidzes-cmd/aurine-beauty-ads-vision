@@ -28,9 +28,9 @@ const AboutUs = () => {
         </div>
 
         {/* Story cards */}
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 px-4">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 px-0 sm:px-4">
           {/* Mission card */}
-          <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 hover:border-primary/30 transition-all duration-300 animate-fade-in-up group w-full">
+          <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-8 hover:border-primary/30 transition-all duration-300 animate-fade-in-up group w-full">
             <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
               <Target className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
             </div>
@@ -44,7 +44,7 @@ const AboutUs = () => {
           </div>
 
           {/* Experience card */}
-          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border border-primary/20 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 hover:border-primary/40 transition-all duration-300 animate-fade-in-up group w-full" style={{ animationDelay: "0.1s" }}>
+          <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border border-primary/20 rounded-xl sm:rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-8 hover:border-primary/40 transition-all duration-300 animate-fade-in-up group w-full" style={{ animationDelay: "0.1s" }}>
             <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/30 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
               <Heart className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
             </div>
@@ -59,7 +59,7 @@ const AboutUs = () => {
         </div>
 
         {/* Values section */}
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-0 sm:px-4">
           <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12 animate-fade-in">
             Nasze wartości
           </h3>
