@@ -70,8 +70,8 @@ const Results = () => {
         </div>
 
         {/* Benefits list */}
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 animate-fade-in px-4">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 animate-fade-in mx-5 sm:mx-auto">
+          <h3 className="text-[1.25rem] leading-tight sm:text-2xl md:text-3xl font-bold text-white mb-6 sm:mb-8 text-center">
             Dlaczego warto z nami pracować?
           </h3>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">

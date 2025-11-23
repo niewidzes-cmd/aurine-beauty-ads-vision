@@ -60,7 +60,7 @@ const AboutUs = () => {
 
         {/* Values section */}
         <div className="max-w-5xl mx-auto px-0 sm:px-4">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12 animate-fade-in">
+          <h3 className="text-[1.5rem] leading-tight sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12 animate-fade-in">
             Nasze wartości
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
@@ -87,10 +87,10 @@ const AboutUs = () => {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
                     <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-primary rounded-full"></div>
                   </div>
-                  <h4 className="text-lg sm:text-xl font-semibold text-white mb-2 sm:mb-3">
+                  <h4 className="text-[1.0625rem] leading-tight sm:text-xl font-semibold text-white mb-3 sm:mb-3">
                     {value.title}
                   </h4>
-                  <p className="text-white/70 leading-relaxed text-sm sm:text-base">
+                  <p className="text-white/70 leading-[1.6] text-[0.9375rem] sm:text-base">
                     {value.description}
                   </p>
                 </div>
