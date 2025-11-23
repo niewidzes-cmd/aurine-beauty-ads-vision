@@ -50,35 +50,35 @@ const Process = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto px-4">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative mb-12 last:mb-0 animate-fade-in-up"
+              className="relative mb-8 sm:mb-12 last:mb-0 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Connection line */}
               {index < steps.length - 1 && (
-                <div className="absolute left-[2.75rem] top-24 w-0.5 h-12 bg-gradient-to-b from-primary/50 to-transparent hidden md:block" />
+                <div className="absolute left-[2.5rem] sm:left-[2.75rem] top-20 sm:top-24 w-0.5 h-8 sm:h-12 bg-gradient-to-b from-primary/50 to-transparent hidden md:block" />
               )}
 
-              <div className="flex gap-6 md:gap-8 items-start">
+              <div className="flex gap-4 sm:gap-6 md:gap-8 items-start">
                 {/* Number and icon */}
                 <div className="flex-shrink-0">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center group-hover:border-primary transition-colors">
-                      <step.icon className="w-8 h-8 text-primary" />
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 flex items-center justify-center group-hover:border-primary transition-colors">
+                      <step.icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-xs font-bold text-white">
+                    <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-full flex items-center justify-center text-[10px] sm:text-xs font-bold text-white">
                       {step.number}
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pt-2">
-                  <h3 className="text-2xl font-semibold text-white mb-3">{step.title}</h3>
-                  <p className="text-white/70 leading-relaxed">{step.description}</p>
+                <div className="flex-1 pt-1 sm:pt-2 min-w-0">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-white/70 leading-relaxed">{step.description}</p>
                 </div>
               </div>
             </div>

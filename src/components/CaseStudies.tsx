@@ -103,8 +103,8 @@ const CaseStudies = () => {
         </div>
 
         {/* Case study content */}
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
             {/* Left column - Image and stats */}
             <div className="space-y-6 animate-fade-in">
               <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden">
@@ -116,17 +116,17 @@ const CaseStudies = () => {
               </div>
 
               {/* Stats grid */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
                 {currentCase.stats.map((stat, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 text-center"
+                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-3 sm:p-4 text-center"
                   >
-                    <stat.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                    <div className="text-2xl font-bold text-white mb-1">
+                    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary mx-auto mb-2" />
+                    <div className="text-lg sm:text-2xl font-bold text-white mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-xs text-white/60">{stat.label}</div>
+                    <div className="text-[10px] sm:text-xs text-white/60 leading-tight">{stat.label}</div>
                   </div>
                 ))}
               </div>
