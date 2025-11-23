@@ -27,7 +27,7 @@ const Hero = () => {
               <span className="text-gradient-pink glow-pink">salonu</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 mb-8 max-w-xl">
-              Pomagamy właścicielkom salonów beauty w małych miastach – fryzjerskich, kosmetycznych, SPA, gabinetów medycyny estetycznej. Tworzymy kampanie reklamowe, które przyciągają prawdziwe klientki, bez pustych obietnic.
+              Pomagamy właścicielkom biznesów beauty w małych miastach. Tworzymy kampanie reklamowe, które przyciągają prawdziwe klientki, bez pustych obietnic.
             </p>
           </div>
 
