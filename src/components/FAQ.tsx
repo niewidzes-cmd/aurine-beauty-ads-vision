@@ -75,7 +75,7 @@ const FAQ = () => {
                 />
               </button>
               {openIndex === index && (
-                <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-[0.9375rem] leading-[1.6] sm:text-base text-white/70">
+                <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-[0.9375rem] leading-[1.6] sm:text-base text-white/70 animate-fade-in">
                   {faq.answer}
                 </div>
               )}
