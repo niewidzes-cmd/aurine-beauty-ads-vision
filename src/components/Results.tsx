@@ -50,7 +50,7 @@ const Results = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-fade-in-up max-w-xs w-full mx-auto"
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 text-center hover:border-primary/50 transition-all duration-300 hover:scale-105 animate-fade-in-up w-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-full mb-3 sm:mb-4">

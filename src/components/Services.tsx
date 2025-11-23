@@ -50,7 +50,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.2)] animate-fade-in-up max-w-md w-full mx-auto"
+              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-5 md:p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.2)] animate-fade-in-up w-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start gap-3 sm:gap-4">
