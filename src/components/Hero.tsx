@@ -42,7 +42,7 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full lg:order-3 lg:col-span-2 justify-center lg:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 w-full lg:order-3 lg:col-span-2 justify-center lg:justify-start relative">
             <button
               onClick={scrollToContact}
               className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:scale-105 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.6)]"
@@ -58,11 +58,18 @@ const Hero = () => {
             >
               Zobacz co robimy
             </button>
+            
+            {/* Scroll indicator - mobile below buttons */}
+            <div className="flex justify-center mt-8 lg:hidden">
+              <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2 animate-bounce">
+                <div className="w-1.5 h-3 bg-primary rounded-full" />
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        {/* Scroll indicator - desktop at bottom */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:flex">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-primary rounded-full" />
           </div>
