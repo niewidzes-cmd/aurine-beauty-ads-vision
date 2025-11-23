@@ -77,7 +77,7 @@ const Testimonials = () => {
                   key={index}
                   className="w-full flex-shrink-0 px-0 sm:px-4 flex justify-center"
                 >
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-none sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full">
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full">
                     {/* Stars */}
                     <div className="flex gap-1 mb-3 sm:mb-4 justify-center">
                       {[...Array(testimonial.rating)].map((_, i) => (
