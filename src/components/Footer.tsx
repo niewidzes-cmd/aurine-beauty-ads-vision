@@ -1,5 +1,6 @@
 import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 import aurineLogoImage from "@/assets/aurine-logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -95,12 +96,12 @@ const Footer = () => {
             © 2024 Aurine. Wszystkie prawa zastrzeżone.
           </p>
           <div className="flex gap-6 text-sm">
-            <button className="text-white/40 hover:text-white/60 transition-colors">
+            <Link to="/polityka-prywatnosci" className="text-white/40 hover:text-white/60 transition-colors">
               Polityka prywatności
-            </button>
-            <button className="text-white/40 hover:text-white/60 transition-colors">
+            </Link>
+            <Link to="/regulamin" className="text-white/40 hover:text-white/60 transition-colors">
               Regulamin
-            </button>
+            </Link>
           </div>
         </div>
       </div>
