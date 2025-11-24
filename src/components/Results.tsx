@@ -21,7 +21,7 @@ const Results = () => {
       icon: TrendingUp,
       value: "Średnio 2x",
       label: "Wzrost zapytań",
-      description: "W ciągu pierwszych 3 miesięcy",
+      description: "W ciągu pierwszego miesiąca",
     },
   ];
 
