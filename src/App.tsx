@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import AboutUsPage from "./pages/AboutUsPage";
 import BlogIndex from "./pages/BlogIndex";
 import PostVsReklama from "./pages/blog/PostVsReklama";
+import JakProwadzicProfil from "./pages/blog/JakProwadzicProfil";
+import KiedyWartoReklamowac from "./pages/blog/KiedyWartoReklamowac";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/o-nas" element={<AboutUsPage />} />
           <Route path="/porady" element={<BlogIndex />} />
           <Route path="/porady/post-vs-reklama" element={<PostVsReklama />} />
+          <Route path="/porady/jak-prowadzic-profil-salonu" element={<JakProwadzicProfil />} />
+          <Route path="/porady/kiedy-warto-reklamowac" element={<KiedyWartoReklamowac />} />
           <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
           <Route path="/regulamin" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
