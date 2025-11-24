@@ -127,33 +127,6 @@ const KiedyWartoReklamowac = () => {
               </section>
 
               <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Ile potrzebujesz budżetu?</h2>
-                <p className="mb-4">
-                  To częste pytanie. Odpowiedź zależy od miasta i konkurencji, ale ogólne wytyczne:
-                </p>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                  <ul className="space-y-4 text-white/70">
-                    <li>
-                      <strong className="text-white block mb-1">Małe miasto (do 20 tys. mieszkańców)</strong>
-                      800-1200 zł miesięcznie na same reklamy + koszt obsługi
-                    </li>
-                    <li>
-                      <strong className="text-white block mb-1">Średnie miasto (20-50 tys. mieszkańców)</strong>
-                      1200-1800 zł miesięcznie na reklamy + koszt obsługi
-                    </li>
-                    <li>
-                      <strong className="text-white block mb-1">Większe miasto (powyżej 50 tys.)</strong>
-                      1800-3000 zł miesięcznie na reklamy + koszt obsługi
-                    </li>
-                  </ul>
-                  <p className="mt-6 text-white/60 text-base">
-                    <strong className="text-white">Ważne:</strong> To tylko budżet reklamowy płacony bezpośrednio 
-                    do Facebooka. Do tego dochodzi koszt obsługi kampanii przez specjalistę.
-                  </p>
-                </div>
-              </section>
-
-              <section>
                 <h2 className="text-3xl font-bold text-white mb-4">Na jakie efekty możesz liczyć?</h2>
                 <p className="mb-4">
                   Realistyczne oczekiwania w małych miastach (dobrze prowadzona kampania):
@@ -178,30 +151,6 @@ const KiedyWartoReklamowac = () => {
                 </p>
               </section>
 
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Czy można zacząć od mniejszego budżetu?</h2>
-                <p className="mb-4">
-                  Tak, można przetestować reklamy z budżetem 500-600 zł, ale:
-                </p>
-                <ul className="mt-4 space-y-3 text-white/70">
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400">✗</span>
-                    <span>Wyniki będą słabsze i mniej przewidywalne</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400">✗</span>
-                    <span>Facebook potrzebuje większego budżetu, żeby "nauczyć się" Twojej grupy docelowej</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400">✗</span>
-                    <span>Koszt pozyskania klientki będzie wyższy</span>
-                  </li>
-                </ul>
-                <p className="mt-4">
-                  Jeśli budżet 800-1200 zł to za dużo, lepiej poczekać i oszczędzać, niż marnować pieniądze na słabo działającą kampanię.
-                </p>
-              </section>
-
               <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
                 <h2 className="text-3xl font-bold text-white mb-4">Podsumowanie</h2>
                 <div className="space-y-4 text-white/80">
@@ -223,7 +172,7 @@ const KiedyWartoReklamowac = () => {
                     </li>
                     <li className="flex items-center gap-3">
                       <span className="text-primary">✓</span>
-                      <span>Dysponujesz budżetem minimum 800-1200 zł miesięcznie</span>
+                      <span>Jesteś gotowa na regularną inwestycję w marketing</span>
                     </li>
                   </ul>
                   <p className="mt-6">
