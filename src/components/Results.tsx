@@ -19,9 +19,9 @@ const Results = () => {
     },
     {
       icon: TrendingUp,
-      value: "Od 1500 zł",
-      label: "Miesięcznie",
-      description: "Budżet + obsługa",
+      value: "50+",
+      label: "Kampanii",
+      description: "Przeprowadzonych dla salonów",
     },
   ];
 
