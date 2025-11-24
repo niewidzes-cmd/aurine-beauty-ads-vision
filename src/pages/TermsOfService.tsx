@@ -1,7 +1,19 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const TermsOfService = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Set meta tags
+    document.title = "Regulamin - Aurine";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Regulamin świadczenia usług Aurine - warunki współpracy, zasady prowadzenia kampanii reklamowych dla salonów beauty.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto px-6 py-12 max-w-4xl">

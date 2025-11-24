@@ -1,7 +1,19 @@
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Set meta tags
+    document.title = "Polityka Prywatności - Aurine";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Polityka prywatności Aurine - informacje o przetwarzaniu danych osobowych, ochronie prywatności i prawach użytkowników.');
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white">
       <div className="container mx-auto px-6 py-12 max-w-4xl">
