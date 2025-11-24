@@ -61,6 +61,11 @@ const Footer = () => {
                   </button>
                 </li>
               ))}
+              <li>
+                <Link to="/o-nas" className="text-white/60 hover:text-primary transition-colors">
+                  Więcej o nas
+                </Link>
+              </li>
             </ul>
           </div>
 
