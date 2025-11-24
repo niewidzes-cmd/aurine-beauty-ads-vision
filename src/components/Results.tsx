@@ -19,9 +19,9 @@ const Results = () => {
     },
     {
       icon: TrendingUp,
-      value: "50+",
-      label: "Kampanii",
-      description: "Przeprowadzonych dla salonów",
+      value: "Średnio 2x",
+      label: "Wzrost zapytań",
+      description: "W ciągu pierwszych 3 miesięcy",
     },
   ];
 
