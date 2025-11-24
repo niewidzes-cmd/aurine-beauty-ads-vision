@@ -8,6 +8,39 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const JakProwadzicProfil = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Set meta tags for SEO
+    document.title = "Jak prowadzić profil salonu na Facebooku - Porady Aurine";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Praktyczny poradnik - co publikować, jak często i jak budować zaangażowanie bez wydawania pieniędzy na reklamy. Dowiedz się jak tworzyć wartościowe treści.');
+    }
+    
+    // Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute('content', 'Jak prowadzić profil salonu na Facebooku - Porady Aurine');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+      ogDescription = document.createElement('meta');
+      ogDescription.setAttribute('property', 'og:description');
+      document.head.appendChild(ogDescription);
+    }
+    ogDescription.setAttribute('content', 'Tworzenie wartościowych treści i budowanie społeczności wokół salonu nie wymaga dużego budżetu. Wystarczy plan i konsekwencja.');
+    
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', 'https://aurine.lovable.app/porady/jak-prowadzic-profil-salonu');
   }, []);
 
   return (

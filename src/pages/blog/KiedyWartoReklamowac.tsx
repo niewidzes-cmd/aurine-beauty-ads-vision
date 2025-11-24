@@ -8,6 +8,39 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const KiedyWartoReklamowac = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Set meta tags for SEO
+    document.title = "Kiedy warto inwestować w reklamy - Porady Aurine";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. Sprawdź, czy Twój biznes jest gotowy na kampanie reklamowe.');
+    }
+    
+    // Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute('content', 'Kiedy warto inwestować w reklamy - Porady Aurine');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+      ogDescription = document.createElement('meta');
+      ogDescription.setAttribute('property', 'og:description');
+      document.head.appendChild(ogDescription);
+    }
+    ogDescription.setAttribute('content', 'Dowiedz się, czy Twój salon jest gotowy na płatne kampanie reklamowe. Sprawdź jakie warunki musisz spełnić przed uruchomieniem reklam.');
+    
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', 'https://aurine.lovable.app/porady/kiedy-warto-reklamowac');
   }, []);
 
   return (

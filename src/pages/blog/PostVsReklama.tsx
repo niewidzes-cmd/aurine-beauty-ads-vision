@@ -8,6 +8,39 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 const PostVsReklama = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Set meta tags for SEO
+    document.title = "Post na Facebooku ≠ Reklama - Porady Aurine";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Większość właścicielek salonów myśli, że publikując post na Facebooku dociera do swoich obserwatorów. Niestety, to mit. Zobacz jaka jest różnica między postem a reklamą.');
+    }
+    
+    // Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+      ogTitle = document.createElement('meta');
+      ogTitle.setAttribute('property', 'og:title');
+      document.head.appendChild(ogTitle);
+    }
+    ogTitle.setAttribute('content', 'Post na Facebooku ≠ Reklama - Porady dla salonów beauty');
+    
+    let ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+      ogDescription = document.createElement('meta');
+      ogDescription.setAttribute('property', 'og:description');
+      document.head.appendChild(ogDescription);
+    }
+    ogDescription.setAttribute('content', 'Dowiedz się, dlaczego organiczny zasięg prawie nie istnieje i czym różni się zwykły post od płatnej reklamy na Facebooku.');
+    
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', 'https://aurine.lovable.app/porady/post-vs-reklama');
   }, []);
 
   return (
