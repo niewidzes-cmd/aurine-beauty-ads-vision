@@ -11,16 +11,16 @@ const Contact = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12 animate-fade-in px-0 sm:px-4">
-            <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-4">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in px-0 sm:px-4">
+            <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-5 sm:mb-6">
               Porozmawiajmy o <span className="text-gradient-pink">Twoim salonie</span>
             </h2>
-            <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60">
+            <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto">
               Umów bezpłatną konsultację – chcemy poznać Twoją historię i dowiedzieć się, jak możemy pomóc
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 animate-scale-in">
+          <div className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-md border border-white/20 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 animate-scale-in shadow-2xl hover:shadow-[0_0_60px_hsl(328,100%,54%/0.15)] transition-shadow duration-500">
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               {[
                 {
@@ -69,11 +69,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="mt-12 sm:mt-16 text-center text-white/40 text-xs sm:text-sm px-4">
-            <p>© 2024 Aurine. Wszystkie prawa zastrzeżone.</p>
-            <p className="mt-2">Kampanie reklamowe dla salonów beauty w małych miastach</p>
-          </div>
         </div>
       </div>
     </section>
