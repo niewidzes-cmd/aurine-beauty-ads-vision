@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TrendingUp, Users, DollarSign, ChevronRight } from "lucide-react";
 import caseChart1 from "@/assets/case-study-chart-1.png";
-import caseChart2 from "@/assets/case-study-chart-2.png";
+import ostrowAnalytics from "@/assets/ostrow-analytics.png";
 import beforeAfter from "@/assets/case-study-before-after.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -41,7 +41,7 @@ const CaseStudies = () => {
         period: "3 miesiące zimowe",
       },
       testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym. Nie wierzę, że to możliwe w tak małym mieście. Naprawdę działa!",
-      image: caseChart2,
+      image: ostrowAnalytics,
       stats: [
         { icon: Users, label: "Nowe klientki", value: "45" },
         { icon: DollarSign, label: "Przychód", value: "+27k zł" },
