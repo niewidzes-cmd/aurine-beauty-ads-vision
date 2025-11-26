@@ -1,4 +1,4 @@
-import analyticsVisual from "@/assets/analytics-dashboard-new.png";
+import analyticsVisual from "@/assets/analytics-dashboard.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Hero = () => {
