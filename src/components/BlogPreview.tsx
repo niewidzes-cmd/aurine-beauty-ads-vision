@@ -1,52 +1,6 @@
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { useState, useRef } from "react";
-import blogPostVsReklama from "@/assets/blog-post-vs-reklama.png";
-import blogProfilSalonu from "@/assets/blog-profil-salonu.png";
-import blogKiedyReklamowac from "@/assets/blog-kiedy-reklamowac.png";
-
-interface ParallaxImageProps {
-  src: string;
-  alt: string;
-}
-
-const ParallaxImage = ({ src, alt }: ParallaxImageProps) => {
-  const [transform, setTransform] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
-    const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
-    // Move in opposite direction (-x, -y) with intensity of 15px
-    setTransform({ x: -x * 15, y: -y * 15 });
-  };
-
-  const handleMouseLeave = () => {
-    setTransform({ x: 0, y: 0 });
-  };
-
-  return (
-    <div
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="relative h-48 overflow-hidden"
-    >
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-full object-cover transition-transform duration-300 ease-out scale-110"
-        style={{
-          transform: `translate(${transform.x}px, ${transform.y}px) scale(1.1)`,
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent pointer-events-none" />
-    </div>
-  );
-};
 
 const BlogPreview = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -57,21 +11,18 @@ const BlogPreview = () => {
       title: "Post na Facebooku ≠ Reklama",
       description: "Większość właścicielek salonów myśli, że publikując post na Facebooku, dociera do swoich obserwatorów. Niestety, to mit. Zobacz, jaka jest różnica.",
       readTime: "5 min",
-      image: blogPostVsReklama,
     },
     {
       slug: "jak-prowadzic-profil-salonu",
       title: "Jak prowadzić profil salonu na Facebooku",
       description: "Praktyczny poradnik - co publikować, jak często i jak budować zaangażowanie bez wydawania pieniędzy na reklamy.",
       readTime: "7 min",
-      image: blogProfilSalonu,
     },
     {
       slug: "kiedy-warto-reklamowac",
       title: "Kiedy warto inwestować w reklamy",
       description: "Nie każdy salon potrzebuje kampanii reklamowych. Sprawdź, czy Twój biznes jest gotowy na płatne reklamy i co powinieneś wcześniej przygotować.",
       readTime: "6 min",
-      image: blogKiedyReklamowac,
     },
   ];
 
@@ -85,7 +36,6 @@ const BlogPreview = () => {
     >
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 blur-3xl rounded-full" />
-      <div className="absolute bottom-1/2 right-0 w-80 h-80 bg-primary/10 blur-3xl rounded-full" />
 
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in px-0 sm:px-4">
@@ -106,28 +56,22 @@ const BlogPreview = () => {
             <Link
               key={index}
               to={`/porady/${article.slug}`}
-              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsl(328,100%,54%/0.3)] animate-fade-in-up hover:scale-[1.02] hover:-translate-y-1"
+              className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsl(328,100%,54%/0.3)] animate-fade-in-up hover:scale-[1.02] hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Image with parallax effect */}
-              <ParallaxImage src={article.image} alt={article.title} />
-              
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <BookOpen className="w-5 h-5 text-primary" />
-                  </div>
-                  <span className="text-xs text-white/50">{article.readTime} czytania</span>
+              <div className="flex items-start justify-between mb-4">
+                <div className="bg-primary/10 p-2 rounded-lg group-hover:bg-primary/20 transition-colors">
+                  <BookOpen className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">
-                  {article.title}
-                </h3>
-                <p className="text-white/70 text-sm leading-relaxed mb-4">{article.description}</p>
-                <div className="flex items-center gap-2 text-primary text-sm font-medium">
-                  Czytaj więcej
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+                <span className="text-xs text-white/50">{article.readTime} czytania</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors">
+                {article.title}
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">{article.description}</p>
+              <div className="flex items-center gap-2 text-primary text-sm font-medium">
+                Czytaj więcej
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
           ))}

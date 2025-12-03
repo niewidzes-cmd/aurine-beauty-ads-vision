@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import heroImage from "@/assets/blog-post-vs-reklama.png";
 
 const PostVsReklama = () => {
   useEffect(() => {
@@ -84,15 +83,6 @@ const PostVsReklama = () => {
               Większość właścicielek salonów myśli, że publikując post na swojej stronie na Facebooku, 
               automatycznie dociera do wszystkich obserwatorów. Niestety, to mit.
             </p>
-          </div>
-
-          {/* Hero image */}
-          <div className="mb-12 rounded-2xl overflow-hidden">
-            <img 
-              src={heroImage} 
-              alt="Post vs Reklama - porównanie zasięgów na Facebooku"
-              className="w-full h-auto"
-            />
           </div>
 
           <div className="prose prose-invert max-w-none">

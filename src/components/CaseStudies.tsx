@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { TrendingUp, Users, DollarSign, ChevronRight, ZoomIn } from "lucide-react";
+import { TrendingUp, Users, DollarSign, ChevronRight } from "lucide-react";
 import caseChart1 from "@/assets/case-study-chart-1.png";
 import ostrowAnalytics from "@/assets/ostrow-analytics.png";
 import beforeAfter from "@/assets/case-study-before-after.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const CaseStudies = () => {
   const [activeCase, setActiveCase] = useState(0);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
   const { ref, isVisible } = useScrollAnimation();
 
   const caseStudies = [
@@ -111,20 +109,12 @@ const CaseStudies = () => {
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
             {/* Left column - Image and stats */}
             <div className="space-y-6 animate-fade-in">
-              <div 
-                onClick={() => setLightboxOpen(true)}
-                className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.2)] group cursor-pointer relative"
-              >
+              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.2)] group cursor-pointer">
                 <img
                   src={currentCase.image}
                   alt={`Case study ${currentCase.salon}`}
                   className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/90 rounded-full p-3">
-                    <ZoomIn className="w-6 h-6 text-white" />
-                  </div>
-                </div>
               </div>
 
               {/* Stats grid */}
@@ -205,18 +195,6 @@ const CaseStudies = () => {
             </div>
           </div>
         </div>
-
-        {/* Lightbox Dialog */}
-        <Dialog open={lightboxOpen} onOpenChange={setLightboxOpen}>
-          <DialogContent className="max-w-4xl w-[95vw] bg-[#0a0a0a] border-white/10 p-2 sm:p-4">
-            <DialogTitle className="sr-only">Raport analityczny - {currentCase.salon}</DialogTitle>
-            <img
-              src={currentCase.image}
-              alt={`Raport analityczny - ${currentCase.salon}`}
-              className="w-full h-auto rounded-lg"
-            />
-          </DialogContent>
-        </Dialog>
       </div>
     </section>
   );

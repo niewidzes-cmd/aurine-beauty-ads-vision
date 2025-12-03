@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import heroImage from "@/assets/blog-profil-salonu.png";
 
 const JakProwadzicProfil = () => {
   useEffect(() => {
@@ -84,15 +83,6 @@ const JakProwadzicProfil = () => {
               Tworzenie wartościowych treści i budowanie społeczności wokół salonu nie wymaga dużego budżetu. 
               Wystarczy plan i konsekwencja.
             </p>
-          </div>
-
-          {/* Hero image */}
-          <div className="mb-12 rounded-2xl overflow-hidden">
-            <img 
-              src={heroImage} 
-              alt="Jak prowadzić profil salonu na Facebooku"
-              className="w-full h-auto"
-            />
           </div>
 
           <div className="prose prose-invert max-w-none">

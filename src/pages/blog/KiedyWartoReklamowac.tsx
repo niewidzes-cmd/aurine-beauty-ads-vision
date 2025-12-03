@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import heroImage from "@/assets/blog-kiedy-reklamowac.png";
 
 const KiedyWartoReklamowac = () => {
   useEffect(() => {
@@ -84,15 +83,6 @@ const KiedyWartoReklamowac = () => {
               Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. 
               Sprawdź, czy Twój biznes jest gotowy.
             </p>
-          </div>
-
-          {/* Hero image */}
-          <div className="mb-12 rounded-2xl overflow-hidden">
-            <img 
-              src={heroImage} 
-              alt="Kiedy warto inwestować w reklamy"
-              className="w-full h-auto"
-            />
           </div>
 
           <div className="prose prose-invert max-w-none">
