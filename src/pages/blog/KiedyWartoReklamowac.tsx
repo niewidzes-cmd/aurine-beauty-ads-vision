@@ -1,253 +1,141 @@
-import { ArrowLeft, Clock } from "lucide-react";
+import { ArrowLeft, Clock, XCircle, CheckCircle, TrendingUp, AlertTriangle, Star, Camera, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import phoneMockupCalendar from "@/assets/phone-mockup-calendar.png";
 
 const KiedyWartoReklamowac = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    
-    // Set meta tags for SEO
     document.title = "Kiedy warto inwestować w reklamy - Porady Aurine";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. Sprawdź, czy Twój biznes jest gotowy na kampanie reklamowe.');
-    }
-    
-    // Open Graph tags
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.setAttribute('content', 'Kiedy warto inwestować w reklamy - Porady Aurine');
-    
-    let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (!ogDescription) {
-      ogDescription = document.createElement('meta');
-      ogDescription.setAttribute('property', 'og:description');
-      document.head.appendChild(ogDescription);
-    }
-    ogDescription.setAttribute('content', 'Dowiedz się, czy Twój salon jest gotowy na płatne kampanie reklamowe. Sprawdź jakie warunki musisz spełnić przed uruchomieniem reklam.');
-    
-    let ogUrl = document.querySelector('meta[property="og:url"]');
-    if (!ogUrl) {
-      ogUrl = document.createElement('meta');
-      ogUrl.setAttribute('property', 'og:url');
-      document.head.appendChild(ogUrl);
-    }
-    ogUrl.setAttribute('content', 'https://aurine.lovable.app/porady/kiedy-warto-reklamowac');
   }, []);
 
   return (
     <div className="min-h-screen bg-black">
       <Navigation />
-      
       <article className="pt-24 sm:pt-28 md:pt-32 pb-20">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <Breadcrumbs 
-            items={[
-              { label: "Porady", href: "/porady" },
-              { label: "Kiedy warto inwestować w reklamy", href: "/porady/kiedy-warto-reklamowac" }
-            ]}
-          />
+        <div className="container mx-auto px-6 max-w-6xl">
+          <Breadcrumbs items={[{ label: "Porady", href: "/porady" }, { label: "Kiedy warto inwestować w reklamy", href: "/porady/kiedy-warto-reklamowac" }]} />
+          <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors mb-8"><ArrowLeft className="w-4 h-4" />Powrót do porad</Link>
 
-          <Link
-            to="/porady"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Powrót do porad
-          </Link>
-
-          <div className="mb-12">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">
-                Strategie
-              </span>
-              <span className="flex items-center gap-2 text-sm text-white/50">
-                <Clock className="w-4 h-4" />
-                6 min czytania
-              </span>
+          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">Strategie</span>
+                <span className="flex items-center gap-2 text-sm text-white/50"><Clock className="w-4 h-4" />6 min czytania</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Kiedy warto <span className="text-gradient-pink">inwestować w reklamy</span></h1>
+              <p className="text-xl text-white/70 leading-relaxed">Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. <strong className="text-white">Sprawdź, czy Twój biznes jest gotowy.</strong></p>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Kiedy warto <span className="text-gradient-pink">inwestować w reklamy</span>
-            </h1>
-            
-            <p className="text-xl text-white/70 leading-relaxed">
-              Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. 
-              Sprawdź, czy Twój biznes jest gotowy.
-            </p>
-          </div>
+            <div className="relative flex justify-center">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
+              <img src={phoneMockupCalendar} alt="Kalendarz rezerwacji salonu" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
+            </div>
+          </section>
 
-          <div className="prose prose-invert max-w-none">
-            <div className="space-y-8 text-white/80 text-lg leading-relaxed">
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Kiedy NIE warto jeszcze reklamować się?</h2>
-                <p>
-                  Zanim zaczniesz inwestować w reklamy, upewnij się, że Twój salon spełnia podstawowe warunki. 
-                  W przeciwnym razie zmarnujesz budżet.
-                </p>
-              </section>
-
-              <section className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">1. Brak wolnych terminów</h3>
-                <p className="mb-4">
-                  Jeśli Twój kalendarz jest pełny na najbliższe 2-3 tygodnie, reklamy nie mają sensu. 
-                  Po co płacić za dotarcie do nowych osób, skoro nie możesz ich przyjąć?
-                </p>
-                <p className="text-white/70">
-                  <strong className="text-white">Co zrobić zamiast tego?</strong><br/>
-                  Skup się na obsłudze obecnych klientek, buduj lojalność i pracuj nad rekomendacjami. 
-                  Gdy pojawią się wolne terminy, wtedy warto uruchomić kampanię.
-                </p>
-              </section>
-
-              <section className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">2. Słabe opinie lub ich brak</h3>
-                <p className="mb-4">
-                  Nowe osoby, które zobaczą Twoją reklamę, sprawdzą opinie na Facebooku lub Google. 
-                  Jeśli nie masz pozytywnych recenzji, trudno będzie je przekonać.
-                </p>
-                <p className="text-white/70">
-                  <strong className="text-white">Co zrobić zamiast tego?</strong><br/>
-                  Poproś zadowolone klientki o wystawienie opinii. Zanim uruchomisz kampanię, 
-                  postaraj się zebrać minimum 10-15 pozytywnych recenzji.
-                </p>
-              </section>
-
-              <section className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">3. Brak zdjęć efektów pracy</h3>
-                <p className="mb-4">
-                  Jeśli nie masz profesjonalnych zdjęć swoich prac (paznokcie, makijaż, brwi), 
-                  reklamy będą mniej skuteczne. Ludzie chcą widzieć, co oferujesz.
-                </p>
-                <p className="text-white/70">
-                  <strong className="text-white">Co zrobić zamiast tego?</strong><br/>
-                  Zacznij robić zdjęcia każdej stylizacji. Nie muszą być perfekcyjne, ale powinny 
-                  dobrze pokazywać efekt. Zbierz minimum 15-20 zdjęć przed uruchomieniem kampanii.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Kiedy warto zacząć reklamować się?</h2>
-                <p>
-                  Reklamy mają sens, gdy spełniasz te warunki:
-                </p>
-              </section>
-
-              <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">✓ Masz wolne terminy</h3>
-                <p className="text-white/80">
-                  Twój kalendarz nie jest zapełniony. Możesz przyjąć nowe klientki w ciągu najbliższych 7-14 dni.
-                </p>
-              </section>
-
-              <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">✓ Masz pozytywne opinie</h3>
-                <p className="text-white/80">
-                  Minimum 10 recenzji na Facebooku lub Google z oceną co najmniej 4.5/5. 
-                  Nowe osoby będą sprawdzać opinie, zanim umówią wizytę.
-                </p>
-              </section>
-
-              <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">✓ Masz materiały do reklam</h3>
-                <p className="text-white/80">
-                  Zdjęcia efektów pracy, które można wykorzystać w reklamach. 
-                  Im więcej, tym lepiej - różnorodność przyciąga uwagę.
-                </p>
-              </section>
-
-              <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">✓ Masz stabilną jakość usług</h3>
-                <p className="text-white/80">
-                  Jesteś pewna swoich umiejętności i jakości pracy. Nowe klientki z reklam 
-                  będą bardziej wymagające niż te z rekomendacji.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Na jakie efekty możesz liczyć?</h2>
-                <p className="mb-4">
-                  Realistyczne oczekiwania w małych miastach (dobrze prowadzona kampania):
-                </p>
-                <ul className="mt-4 space-y-3 text-white/70">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">→</span>
-                    <span><strong className="text-white">Pierwszy miesiąc:</strong> 10-20 nowych zapytań, z czego 60-70% umówi wizytę</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">→</span>
-                    <span><strong className="text-white">Drugi-trzeci miesiąc:</strong> 15-30 nowych zapytań miesięcznie</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">→</span>
-                    <span><strong className="text-white">Po trzech miesiącach:</strong> Stabilny napływ nowych klientek + część z nich wraca regularnie</span>
-                  </li>
-                </ul>
-                <p className="mt-6 text-white/60">
-                  <strong className="text-white">Pamiętaj:</strong> To średnie wyniki. Rzeczywiste efekty zależą od wielu czynników: 
-                  jakości kampanii, Twojej oferty, lokalizacji, konkurencji i pory roku.
-                </p>
-              </section>
-
-              <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Podsumowanie</h2>
-                <div className="space-y-4 text-white/80">
-                  <p>
-                    <strong className="text-white">Zacznij reklamować się, gdy:</strong>
-                  </p>
-                  <ul className="space-y-2 ml-4">
-                    <li className="flex items-center gap-3">
-                      <span className="text-primary">✓</span>
-                      <span>Masz wolne terminy w kalendarzu</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="text-primary">✓</span>
-                      <span>Posiadasz minimum 10-15 pozytywnych opinii</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="text-primary">✓</span>
-                      <span>Masz zdjęcia efektów swojej pracy</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="text-primary">✓</span>
-                      <span>Jesteś gotowa na regularną inwestycję w marketing</span>
-                    </li>
-                  </ul>
-                  <p className="mt-6">
-                    Jeśli któryś z tych punktów nie jest spełniony, najpierw popracuj nad fundamentami. 
-                    Reklamy są skuteczne tylko wtedy, gdy masz solidne podstawy.
-                  </p>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center"><XCircle className="w-6 h-6 text-red-400" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Kiedy NIE warto jeszcze reklamować się?</h2>
+            </div>
+            <div className="space-y-6">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0"><Calendar className="w-6 h-6 text-red-400" /></div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">1. Brak wolnych terminów</h3>
+                    <p className="text-white/70 mb-4">Jeśli Twój kalendarz jest pełny na najbliższe 2-3 tygodnie, reklamy nie mają sensu.</p>
+                    <div className="bg-primary/10 rounded-xl p-4"><p className="text-white/80"><strong className="text-primary">Co zrobić?</strong> Skup się na obsłudze obecnych klientek.</p></div>
+                  </div>
                 </div>
-              </section>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0"><Star className="w-6 h-6 text-red-400" /></div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">2. Słabe opinie lub ich brak</h3>
+                    <p className="text-white/70 mb-4">Nowe osoby sprawdzą opinie. Zbierz minimum 10-15 pozytywnych recenzji.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center flex-shrink-0"><Camera className="w-6 h-6 text-red-400" /></div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">3. Brak zdjęć efektów pracy</h3>
+                    <p className="text-white/70 mb-4">Zbierz minimum 15-20 zdjęć przed uruchomieniem kampanii.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <div className="mt-16 pt-8 border-t border-white/10 flex justify-between items-center">
-            <Link
-              to="/porady"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Wszystkie porady
-            </Link>
-            <Link
-              to="/#contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105"
-            >
-              Porozmawiajmy o kampanii
-            </Link>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><CheckCircle className="w-6 h-6 text-primary" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Kiedy warto zacząć reklamować się?</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[{ title: "Masz wolne terminy", desc: "Możesz przyjąć nowe klientki w ciągu 7-14 dni." }, { title: "Masz pozytywne opinie", desc: "Minimum 10 recenzji z oceną 4.5/5." }, { title: "Masz materiały do reklam", desc: "Zdjęcia efektów pracy." }, { title: "Masz stabilną jakość usług", desc: "Jesteś pewna swoich umiejętności." }].map((item, index) => (
+                <div key={index} className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4"><span className="text-primary text-2xl">✓</span><h3 className="text-lg font-bold text-white">{item.title}</h3></div>
+                  <p className="text-white/70">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><TrendingUp className="w-6 h-6 text-primary" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Na jakie efekty możesz liczyć?</h2>
+            </div>
+            <div className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-3xl p-8 md:p-12">
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <h4 className="text-lg font-bold text-white mb-2">Pierwszy miesiąc</h4>
+                  <p className="text-2xl font-bold text-primary mb-2">10-20</p>
+                  <p className="text-white/60 text-sm">nowych zapytań</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold text-white mb-2">Miesiąc 2-3</h4>
+                  <p className="text-2xl font-bold text-primary mb-2">15-30</p>
+                  <p className="text-white/60 text-sm">zapytań miesięcznie</p>
+                </div>
+                <div className="text-center">
+                  <h4 className="text-lg font-bold text-white mb-2">Po 3 miesiącach</h4>
+                  <p className="text-2xl font-bold text-primary mb-2">Stabilny</p>
+                  <p className="text-white/60 text-sm">napływ klientek</p>
+                </div>
+              </div>
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <div className="flex items-start gap-4 bg-white/5 rounded-xl p-4">
+                  <AlertTriangle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-white/60 text-sm"><strong className="text-white">Pamiętaj:</strong> To średnie wyniki. Rzeczywiste efekty zależą od wielu czynników.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-16">
+            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-3xl p-8 md:p-12">
+              <h3 className="text-xl font-bold text-white mb-6">Zacznij reklamować się, gdy:</h3>
+              <div className="grid md:grid-cols-2 gap-4 mb-8">
+                {["Masz wolne terminy w kalendarzu", "Posiadasz minimum 10-15 pozytywnych opinii", "Masz zdjęcia efektów swojej pracy", "Jesteś gotowa na regularną inwestycję"].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3 bg-black/20 rounded-xl p-4"><span className="text-primary text-xl">✓</span><p className="text-white/80">{item}</p></div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors"><ArrowLeft className="w-4 h-4" />Wszystkie porady</Link>
+            <Link to="/#contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105">Porozmawiajmy o kampanii</Link>
           </div>
         </div>
       </article>
-
       <Footer />
     </div>
   );

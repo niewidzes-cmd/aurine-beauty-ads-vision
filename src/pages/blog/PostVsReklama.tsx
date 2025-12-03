@@ -1,214 +1,118 @@
-import { ArrowLeft, Clock, BookOpen } from "lucide-react";
+import { ArrowLeft, Clock, TrendingUp, Users, Target, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import phoneMockupAds from "@/assets/phone-mockup-ads.png";
 
 const PostVsReklama = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    
-    // Set meta tags for SEO
     document.title = "Post na Facebooku ≠ Reklama - Porady Aurine";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Większość właścicielek salonów myśli, że publikując post na Facebooku dociera do swoich obserwatorów. Niestety, to mit. Zobacz jaka jest różnica między postem a reklamą.');
-    }
-    
-    // Open Graph tags
-    let ogTitle = document.querySelector('meta[property="og:title"]');
-    if (!ogTitle) {
-      ogTitle = document.createElement('meta');
-      ogTitle.setAttribute('property', 'og:title');
-      document.head.appendChild(ogTitle);
-    }
-    ogTitle.setAttribute('content', 'Post na Facebooku ≠ Reklama - Porady dla salonów beauty');
-    
-    let ogDescription = document.querySelector('meta[property="og:description"]');
-    if (!ogDescription) {
-      ogDescription = document.createElement('meta');
-      ogDescription.setAttribute('property', 'og:description');
-      document.head.appendChild(ogDescription);
-    }
-    ogDescription.setAttribute('content', 'Dowiedz się, dlaczego organiczny zasięg prawie nie istnieje i czym różni się zwykły post od płatnej reklamy na Facebooku.');
-    
-    let ogUrl = document.querySelector('meta[property="og:url"]');
-    if (!ogUrl) {
-      ogUrl = document.createElement('meta');
-      ogUrl.setAttribute('property', 'og:url');
-      document.head.appendChild(ogUrl);
-    }
-    ogUrl.setAttribute('content', 'https://aurine.lovable.app/porady/post-vs-reklama');
   }, []);
 
   return (
     <div className="min-h-screen bg-black">
       <Navigation />
-      
       <article className="pt-24 sm:pt-28 md:pt-32 pb-20">
-        <div className="container mx-auto px-6 max-w-4xl">
-          <Breadcrumbs 
-            items={[
-              { label: "Porady", href: "/porady" },
-              { label: "Post na Facebooku ≠ Reklama", href: "/porady/post-vs-reklama" }
-            ]}
-          />
-
-          <Link
-            to="/porady"
-            className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Powrót do porad
+        <div className="container mx-auto px-6 max-w-6xl">
+          <Breadcrumbs items={[{ label: "Porady", href: "/porady" }, { label: "Post na Facebooku ≠ Reklama", href: "/porady/post-vs-reklama" }]} />
+          <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors mb-8">
+            <ArrowLeft className="w-4 h-4" />Powrót do porad
           </Link>
 
-          <div className="mb-12">
-            <div className="flex items-center gap-4 mb-6">
-              <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">
-                Facebook Marketing
-              </span>
-              <span className="flex items-center gap-2 text-sm text-white/50">
-                <Clock className="w-4 h-4" />
-                5 min czytania
-              </span>
+          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div>
+              <div className="flex items-center gap-4 mb-6">
+                <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">Facebook Marketing</span>
+                <span className="flex items-center gap-2 text-sm text-white/50"><Clock className="w-4 h-4" />5 min czytania</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Post na Facebooku <span className="text-gradient-pink">≠</span> Reklama</h1>
+              <p className="text-xl text-white/70 leading-relaxed">Większość właścicielek salonów myśli, że publikując post na swojej stronie na Facebooku, automatycznie dociera do wszystkich obserwatorów. <strong className="text-white">Niestety, to mit.</strong></p>
             </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Post na Facebooku <span className="text-gradient-pink">≠</span> Reklama
-            </h1>
-            
-            <p className="text-xl text-white/70 leading-relaxed">
-              Większość właścicielek salonów myśli, że publikując post na swojej stronie na Facebooku, 
-              automatycznie dociera do wszystkich obserwatorów. Niestety, to mit.
-            </p>
-          </div>
+            <div className="relative flex justify-center">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
+              <img src={phoneMockupAds} alt="Facebook Ads Manager na telefonie" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
+            </div>
+          </section>
 
-          <div className="prose prose-invert max-w-none">
-            <div className="space-y-8 text-white/80 text-lg leading-relaxed">
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Organiczny zasięg prawie nie istnieje</h2>
-                <p>
-                  Kiedy publikujesz zwykły post na stronie swojego salonu, Facebook pokazuje go średnio tylko 
-                  <strong className="text-primary"> 2-5% Twoich obserwatorów</strong>. To znaczy, że jeśli masz 1000 
-                  obserwujących, Twój post zobaczy zaledwie 20-50 osób.
-                </p>
-                <p className="mt-4">
-                  Dlaczego? Bo Facebook jest biznesem. Jego celem jest zarabianie na reklamach, więc algorytm 
-                  świadomie ogranicza zasięg organiczny, żebyś płacił za dotarcie do większej liczby osób.
-                </p>
-              </section>
-
-              <section className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Co to znaczy w praktyce?</h3>
-                <ul className="space-y-3 text-white/70">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">•</span>
-                    <span>Publikujesz zdjęcie nowej usługi → widzi to kilkadziesiąt osób, które już Cię znają</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">•</span>
-                    <span>Ogłaszasz promocję → dociera do ułamka Twoich obserwatorów</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">•</span>
-                    <span>Osoby, które NIE obserwują Twojej strony, w ogóle nie zobaczą Twoich postów</span>
-                  </li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Czym różni się reklama?</h2>
-                <p>
-                  Reklama na Facebooku to płatny sposób dotarcia do ludzi. Możesz precyzyjnie wybrać, 
-                  kto zobaczy Twój komunikat:
-                </p>
-                <ul className="mt-4 space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">✓</span>
-                    <span><strong className="text-white">Lokalizacja:</strong> np. kobiety w promieniu 15 km od Twojego salonu</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">✓</span>
-                    <span><strong className="text-white">Zainteresowania:</strong> osoby interesujące się urodą, kosmetyką, pielęgnacją</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">✓</span>
-                    <span><strong className="text-white">Wiek i płeć:</strong> dostosuj komunikat do grupy docelowej</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary font-bold">✓</span>
-                    <span><strong className="text-white">Zasięg:</strong> dotrzesz do setek lub tysięcy osób, nie tylko do obserwatorów</span>
-                  </li>
-                </ul>
-              </section>
-
-              <section>
-                <h2 className="text-3xl font-bold text-white mb-4">Czy to znaczy, że posty nie mają sensu?</h2>
-                <p>
-                  Nie! Posty organiczne nadal pełnią ważną funkcję:
-                </p>
-                <ul className="mt-4 space-y-3 text-white/70">
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary">→</span>
-                    <span>Budują wizerunek salonu dla osób, które już Cię znają</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary">→</span>
-                    <span>Pokazują aktualności, promocje, efekty pracy</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary">→</span>
-                    <span>Odpowiadają na pytania klientek w komentarzach</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-primary">→</span>
-                    <span>Tworzą spójny profil, który ogląda ktoś, kto trafi na Twoją stronę</span>
-                  </li>
-                </ul>
-                <p className="mt-6">
-                  Jednak jeśli chcesz <strong className="text-white">dotrzeć do nowych osób, które jeszcze nie znają Twojego salonu</strong>, 
-                  potrzebujesz reklam. Inaczej zostaniesz niewidoczna dla potencjalnych klientek.
-                </p>
-              </section>
-
-              <section className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 md:p-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Podsumowanie</h2>
-                <div className="space-y-4 text-white/80">
-                  <p>
-                    <strong className="text-white">Post organiczny</strong> = widzą go głównie osoby, które już obserwują Twoją stronę (2-5% z nich)
-                  </p>
-                  <p>
-                    <strong className="text-white">Płatna reklama</strong> = widzą ją setki/tysiące osób z Twojego regionu, 
-                    które dopasowujesz pod kątem zainteresowań i demografii
-                  </p>
-                  <p className="mt-6 text-primary font-semibold">
-                    Jeśli chcesz, żeby nowe osoby dowiedziały się o Twoim salonie, posty organiczne nie wystarczą.
-                  </p>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><Eye className="w-6 h-6 text-primary" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Organiczny zasięg prawie nie istnieje</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <p className="text-lg text-white/80 leading-relaxed mb-6">Kiedy publikujesz zwykły post na stronie swojego salonu, Facebook pokazuje go średnio tylko <strong className="text-primary"> 2-5% Twoich obserwatorów</strong>.</p>
+                <div className="bg-primary/10 rounded-xl p-6">
+                  <p className="text-white font-semibold text-lg mb-2">Co to znaczy?</p>
+                  <p className="text-white/70">Jeśli masz 1000 obserwujących, Twój post zobaczy zaledwie <strong className="text-white">20-50 osób</strong>.</p>
                 </div>
-              </section>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <p className="text-lg text-white/80 leading-relaxed mb-4"><strong className="text-white">Dlaczego tak jest?</strong></p>
+                <p className="text-white/70 leading-relaxed">Bo Facebook jest biznesem. Jego celem jest zarabianie na reklamach, więc algorytm świadomie ogranicza zasięg organiczny.</p>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <div className="mt-16 pt-8 border-t border-white/10 flex justify-between items-center">
-            <Link
-              to="/porady"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Wszystkie porady
-            </Link>
-            <Link
-              to="/#contact"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105"
-            >
-              Porozmawiajmy o kampanii
-            </Link>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><Target className="w-6 h-6 text-primary" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Czym różni się reklama?</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[{ title: "Lokalizacja", desc: "np. kobiety w promieniu 15 km od Twojego salonu" }, { title: "Zainteresowania", desc: "osoby interesujące się urodą, kosmetyką" }, { title: "Wiek i płeć", desc: "dostosuj komunikat do grupy docelowej" }, { title: "Zasięg", desc: "dotrzesz do setek lub tysięcy osób" }].map((item, index) => (
+                <div key={index} className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6">
+                  <div className="flex items-center gap-2 mb-3"><span className="text-primary font-bold">✓</span><span className="text-white font-semibold">{item.title}</span></div>
+                  <p className="text-white/60 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><Users className="w-6 h-6 text-primary" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Czy posty nie mają sensu?</h2>
+            </div>
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12">
+              <p className="text-xl text-white mb-8"><strong>Nie!</strong> Posty organiczne nadal pełnią ważną funkcję:</p>
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                {["Budują wizerunek salonu", "Pokazują aktualności i efekty pracy", "Odpowiadają na pytania klientek", "Tworzą spójny profil"].map((item, index) => (
+                  <div key={index} className="flex items-start gap-4"><span className="text-primary text-xl">→</span><p className="text-white/70">{item}</p></div>
+                ))}
+              </div>
+              <div className="bg-primary/10 rounded-xl p-6">
+                <p className="text-white/90">Jednak jeśli chcesz <strong className="text-white">dotrzeć do nowych osób</strong>, potrzebujesz reklam.</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center"><TrendingUp className="w-6 h-6 text-primary" /></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Podsumowanie</h2>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+                <h3 className="text-xl font-bold text-white mb-4">Post organiczny</h3>
+                <p className="text-white/70">Widzą go głównie osoby, które już obserwują Twoją stronę <strong className="text-primary">(2-5% z nich)</strong></p>
+              </div>
+              <div className="bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 rounded-2xl p-8">
+                <h3 className="text-xl font-bold text-white mb-4">Płatna reklama</h3>
+                <p className="text-white/80">Widzą ją setki/tysiące osób z Twojego regionu</p>
+              </div>
+            </div>
+          </section>
+
+          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors"><ArrowLeft className="w-4 h-4" />Wszystkie porady</Link>
+            <Link to="/#contact" className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all hover:scale-105">Porozmawiajmy o kampanii</Link>
           </div>
         </div>
       </article>
-
       <Footer />
     </div>
   );
