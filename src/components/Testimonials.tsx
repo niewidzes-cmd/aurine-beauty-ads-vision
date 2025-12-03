@@ -25,6 +25,24 @@ const Testimonials = () => {
       text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm.",
       rating: 5,
     },
+    {
+      name: "Karolina M.",
+      business: "Salon fryzjerski - Legionowo",
+      text: "Współpraca z Aurine to czysta przyjemność. Kontakt jest świetny, zawsze mogę napisać z pytaniem i dostaję szybką, jasną odpowiedź. Wszystko tłumaczą normalnie, po ludzku. Widać, że naprawdę znają się na tym, co robią, i zależy im, żeby współpraca przebiegała sprawnie. Jestem bardzo zadowolona i polecam każdemu salonowi beauty!",
+      rating: 5,
+    },
+    {
+      name: "Anna K.",
+      business: "Gabinet medycyny estetycznej - Piaseczno",
+      text: "Jestem bardzo zadowolona ze współpracy z Aurine. Świetne wyniki, zawsze dostępni i pomocni. Polecam z całego serca!",
+      rating: 5,
+    },
+    {
+      name: "Patrycja D.",
+      business: "Studio stylizacji paznokci - Otwock",
+      text: "Współpracuję z Aurine już od kilku miesięcy i z pełnym przekonaniem mogę polecić Przemka i cały zespół. Naprawdę wiedzą, jak robić marketing lokalny i przyciągać klientów. Chętnie dzielą się wiedzą, tłumaczą wszystko krok po kroku i cierpliwie pomagają, jeśli dopiero uczysz się marketingu. Dzięki nim zauważyłam realny wzrost zainteresowania moimi usługami i efekty ich pracy są naprawdę widoczne.",
+      rating: 5,
+    },
   ];
 
   const nextTestimonial = () => {
