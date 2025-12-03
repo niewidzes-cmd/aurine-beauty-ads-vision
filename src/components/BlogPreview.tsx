@@ -1,9 +1,52 @@
 import { ArrowRight, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useState, useRef } from "react";
 import blogPostVsReklama from "@/assets/blog-post-vs-reklama.png";
 import blogProfilSalonu from "@/assets/blog-profil-salonu.png";
 import blogKiedyReklamowac from "@/assets/blog-kiedy-reklamowac.png";
+
+interface ParallaxImageProps {
+  src: string;
+  alt: string;
+}
+
+const ParallaxImage = ({ src, alt }: ParallaxImageProps) => {
+  const [transform, setTransform] = useState({ x: 0, y: 0 });
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) / rect.width;
+    const y = (e.clientY - rect.top - rect.height / 2) / rect.height;
+    // Move in opposite direction (-x, -y) with intensity of 15px
+    setTransform({ x: -x * 15, y: -y * 15 });
+  };
+
+  const handleMouseLeave = () => {
+    setTransform({ x: 0, y: 0 });
+  };
+
+  return (
+    <div
+      ref={containerRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative h-48 overflow-hidden"
+    >
+      <img
+        src={src}
+        alt={alt}
+        className="w-full h-full object-cover transition-transform duration-300 ease-out scale-110"
+        style={{
+          transform: `translate(${transform.x}px, ${transform.y}px) scale(1.1)`,
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent pointer-events-none" />
+    </div>
+  );
+};
 
 const BlogPreview = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -66,15 +109,8 @@ const BlogPreview = () => {
               className="group bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsl(328,100%,54%/0.3)] animate-fade-in-up hover:scale-[1.02] hover:-translate-y-1"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={article.image} 
-                  alt={article.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent" />
-              </div>
+              {/* Image with parallax effect */}
+              <ParallaxImage src={article.image} alt={article.title} />
               
               {/* Content */}
               <div className="p-6">
