@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import phoneMockup from "@/assets/phone-mockup-3.png";
 
 const KiedyWartoReklamowac = () => {
   useEffect(() => {
@@ -20,19 +19,13 @@ const KiedyWartoReklamowac = () => {
           <Breadcrumbs items={[{ label: "Porady", href: "/porady" }, { label: "Kiedy warto inwestować w reklamy", href: "/porady/kiedy-warto-reklamowac" }]} />
           <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors mb-8"><ArrowLeft className="w-4 h-4" />Powrót do porad</Link>
 
-          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">Strategie</span>
-                <span className="flex items-center gap-2 text-sm text-white/50"><Clock className="w-4 h-4" />6 min czytania</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Kiedy warto <span className="text-gradient-pink">inwestować w reklamy</span></h1>
-              <p className="text-xl text-white/70 leading-relaxed">Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. <strong className="text-white">Sprawdź, czy Twój biznes jest gotowy.</strong></p>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">Strategie</span>
+              <span className="flex items-center gap-2 text-sm text-white/50"><Clock className="w-4 h-4" />6 min czytania</span>
             </div>
-            <div className="relative flex justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <img src={phoneMockup} alt="Kalendarz rezerwacji salonu" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Kiedy warto <span className="text-gradient-pink">inwestować w reklamy</span></h1>
+            <p className="text-xl text-white/70 leading-relaxed max-w-3xl">Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. <strong className="text-white">Sprawdź, czy Twój biznes jest gotowy.</strong></p>
           </section>
 
           <section className="mb-20">
