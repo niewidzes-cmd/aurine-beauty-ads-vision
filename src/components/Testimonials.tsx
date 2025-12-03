@@ -8,20 +8,20 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Klientka salonu",
-      business: "Salon kosmetyczny",
+      name: "Zuzanna W.",
+      business: "Salon kosmetyczny - Wołomin",
       text: "Bardzo jasne tłumaczenie każdego etapu i realne efekty, a reklamy zaczęły przyciągać klientki od pierwszego tygodnia.",
       rating: 5,
     },
     {
-      name: "Klientka salonu",
-      business: "Gabinet kosmetyczny",
+      name: "Magdalena W.",
+      business: "Gabinet kosmetyczny - Marki",
       text: "Serdecznie polecam. Pan Przemek ma super podejście, nawet trudne rzeczy wyjaśniał w prosty sposób.",
       rating: 5,
     },
     {
-      name: "Klientka salonu",
-      business: "Salon beauty",
+      name: "Wioletta S.",
+      business: "Salon beauty - Grodzisk Mazowiecki",
       text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm.",
       rating: 5,
     },
