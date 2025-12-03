@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import phoneMockupProfile from "@/assets/phone-mockup-profile.png";
+import phoneMockup from "@/assets/phone-mockup-2.png";
 
 const JakProwadzicProfil = () => {
   useEffect(() => {
@@ -64,11 +64,7 @@ const JakProwadzicProfil = () => {
 
             <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <img 
-                src={phoneMockupProfile} 
-                alt="Profil salonu beauty na Facebooku" 
-                className="relative z-10 w-64 md:w-72 drop-shadow-2xl"
-              />
+              <img src={phoneMockup} alt="Profil salonu beauty na Facebooku" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
             </div>
           </section>
 

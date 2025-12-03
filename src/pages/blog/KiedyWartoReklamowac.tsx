@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import phoneMockupCalendar from "@/assets/phone-mockup-calendar.png";
+import phoneMockup from "@/assets/phone-mockup-3.png";
 
 const KiedyWartoReklamowac = () => {
   useEffect(() => {
@@ -31,7 +31,7 @@ const KiedyWartoReklamowac = () => {
             </div>
             <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <img src={phoneMockupCalendar} alt="Kalendarz rezerwacji salonu" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
+              <img src={phoneMockup} alt="Kalendarz rezerwacji salonu" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
             </div>
           </section>
 
