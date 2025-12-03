@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import phoneMockup from "@/assets/phone-mockup-1.png";
 
 const PostVsReklama = () => {
   useEffect(() => {
@@ -22,19 +21,13 @@ const PostVsReklama = () => {
             <ArrowLeft className="w-4 h-4" />Powrót do porad
           </Link>
 
-          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">Facebook Marketing</span>
-                <span className="flex items-center gap-2 text-sm text-white/50"><Clock className="w-4 h-4" />5 min czytania</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Post na Facebooku <span className="text-gradient-pink">≠</span> Reklama</h1>
-              <p className="text-xl text-white/70 leading-relaxed">Większość właścicielek salonów myśli, że publikując post na swojej stronie na Facebooku, automatycznie dociera do wszystkich obserwatorów. <strong className="text-white">Niestety, to mit.</strong></p>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">Facebook Marketing</span>
+              <span className="flex items-center gap-2 text-sm text-white/50"><Clock className="w-4 h-4" />5 min czytania</span>
             </div>
-            <div className="relative flex justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <img src={phoneMockup} alt="Facebook Ads Manager na telefonie" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Post na Facebooku <span className="text-gradient-pink">≠</span> Reklama</h1>
+            <p className="text-xl text-white/70 leading-relaxed max-w-3xl">Większość właścicielek salonów myśli, że publikując post na swojej stronie na Facebooku, automatycznie dociera do wszystkich obserwatorów. <strong className="text-white">Niestety, to mit.</strong></p>
           </section>
 
           <section className="mb-20">

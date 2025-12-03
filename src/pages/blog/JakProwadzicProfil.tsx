@@ -1,10 +1,9 @@
-import { ArrowLeft, Clock, Camera, BookOpen, MessageCircle, Calendar, AlertTriangle, CheckCircle } from "lucide-react";
+import { ArrowLeft, Clock, Camera, MessageCircle, Calendar, AlertTriangle, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import phoneMockup from "@/assets/phone-mockup-2.png";
 
 const JakProwadzicProfil = () => {
   useEffect(() => {
@@ -40,32 +39,25 @@ const JakProwadzicProfil = () => {
           </Link>
 
           {/* Hero Section */}
-          <section className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-              <div className="flex items-center gap-4 mb-6">
-                <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">
-                  Social Media
-                </span>
-                <span className="flex items-center gap-2 text-sm text-white/50">
-                  <Clock className="w-4 h-4" />
-                  7 min czytania
-                </span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Jak prowadzić profil <span className="text-gradient-pink">salonu na Facebooku</span>
-              </h1>
-              
-              <p className="text-xl text-white/70 leading-relaxed">
-                Tworzenie wartościowych treści i budowanie społeczności wokół salonu nie wymaga dużego budżetu. 
-                <strong className="text-white"> Wystarczy plan i konsekwencja.</strong>
-              </p>
+          <section className="mb-20">
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-sm text-primary font-medium bg-primary/10 px-4 py-2 rounded-full">
+                Social Media
+              </span>
+              <span className="flex items-center gap-2 text-sm text-white/50">
+                <Clock className="w-4 h-4" />
+                7 min czytania
+              </span>
             </div>
-
-            <div className="relative flex justify-center">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <img src={phoneMockup} alt="Profil salonu beauty na Facebooku" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
-            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Jak prowadzić profil <span className="text-gradient-pink">salonu na Facebooku</span>
+            </h1>
+            
+            <p className="text-xl text-white/70 leading-relaxed max-w-3xl">
+              Tworzenie wartościowych treści i budowanie społeczności wokół salonu nie wymaga dużego budżetu. 
+              <strong className="text-white"> Wystarczy plan i konsekwencja.</strong>
+            </p>
           </section>
 
           {/* Section 1 - What to publish */}
