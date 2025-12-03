@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TrendingUp, Users, DollarSign, ChevronRight, ZoomIn, BarChart3 } from "lucide-react";
+import { TrendingUp, Users, DollarSign, ChevronRight, ZoomIn } from "lucide-react";
 import caseChart1 from "@/assets/case-study-chart-1.png";
 import ostrowAnalytics from "@/assets/ostrow-analytics.png";
 import beforeAfter from "@/assets/case-study-before-after.png";
@@ -10,11 +10,6 @@ const CaseStudies = () => {
   const [activeCase, setActiveCase] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const { ref, isVisible } = useScrollAnimation();
-
-  // Summary statistics
-  const totalClients = 32 + 102 + 28; // 162
-  const totalRevenue = 18000 + 8970 + 22000; // 48,970
-  const avgROI = ((3.2 + 13.0 + 3.8) / 3).toFixed(1); // 6.7
 
   const caseStudies = [
     {
@@ -92,30 +87,6 @@ const CaseStudies = () => {
           <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
             Salony z małych miast, którym pomogliśmy – może Twój będzie następny
           </p>
-        </div>
-
-        {/* Summary statistics */}
-        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 px-0 sm:px-4">
-          <div className="bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 rounded-2xl p-6 sm:p-8">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <BarChart3 className="w-6 h-6 text-primary" />
-              <h3 className="text-xl sm:text-2xl font-bold text-white">Podsumowanie wszystkich kampanii</h3>
-            </div>
-            <div className="grid grid-cols-3 gap-4 sm:gap-8">
-              <div className="text-center">
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1">{totalClients}</div>
-                <div className="text-xs sm:text-sm text-white/60">Nowych klientek</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1">+{(totalRevenue / 1000).toFixed(1)}k zł</div>
-                <div className="text-xs sm:text-sm text-white/60">Łączny przychód</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl sm:text-4xl font-bold text-primary mb-1">{avgROI}x</div>
-                <div className="text-xs sm:text-sm text-white/60">Średnie ROI</div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Case study selector */}
