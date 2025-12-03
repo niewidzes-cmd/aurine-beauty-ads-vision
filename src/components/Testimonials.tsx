@@ -8,45 +8,21 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Wioletta S.",
-      business: "Salon kosmetyczny - Grodzisk Mazowiecki",
-      text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm. Świetna współpraca, wszystko wytłumaczone krok po kroku, pierwsze efekty były po kilku dniach.",
+      name: "Klientka salonu",
+      business: "Salon kosmetyczny",
+      text: "Bardzo jasne tłumaczenie każdego etapu i realne efekty, a reklamy zaczęły przyciągać klientki od pierwszego tygodnia.",
       rating: 5,
     },
     {
-      name: "Zuzanna W.",
-      business: "Salon fryzjerski - Wołomin",
-      text: "Bardzo polecam Agencję Aurine, a zwłaszcza specjalistę Pana Przemka. Świetne podejście i wiedza dają szybkie efekty ;).",
-      rating: 5,
-    },
-    {
-      name: "Magdalena W.",
-      business: "Gabinet kosmetyczny - Marki",
+      name: "Klientka salonu",
+      business: "Gabinet kosmetyczny",
       text: "Serdecznie polecam. Pan Przemek ma super podejście, nawet trudne rzeczy wyjaśniał w prosty sposób.",
       rating: 5,
     },
     {
-      name: "Aleksandra S.",
-      business: "Studio urody - Ząbki",
-      text: "Profesjonalna obsługa i widoczne rezultaty. Polecam współpracę z Aurine każdej właścicielce salonu, która chce rozwijać swój biznes.",
-      rating: 5,
-    },
-    {
-      name: "Karolina M.",
-      business: "Salon kosmetyczny - Sulejówek",
-      text: "Współpraca z Aurine to strzał w dziesiątkę! Liczba klientek w moim salonie wzrosła o 60% w ciągu pierwszych dwóch miesięcy. Pełen profesjonalizm i zaangażowanie.",
-      rating: 5,
-    },
-    {
-      name: "Natalia K.",
-      business: "Gabinet beauty - Piastów",
-      text: "Nareszcie trafiliśmy na agencję, która naprawdę rozumie specyfikę branży beauty. Pan Przemek doskonale wie, jak dotrzeć do naszych klientek. Efekty przeszły nasze oczekiwania!",
-      rating: 5,
-    },
-    {
-      name: "Joanna B.",
-      business: "Studio stylizacji - Kobyłka",
-      text: "Bardzo profesjonalne podejście i konkretne rezultaty. Reklamy są świetnie dopasowane, a calendar wizyt jest teraz pełny. Z czystym sumieniem polecam Aurine!",
+      name: "Klientka salonu",
+      business: "Salon beauty",
+      text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm.",
       rating: 5,
     },
   ];
