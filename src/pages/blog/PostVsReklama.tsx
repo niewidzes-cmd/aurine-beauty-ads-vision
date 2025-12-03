@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import phoneMockupAds from "@/assets/phone-mockup-ads.png";
+import phoneMockup from "@/assets/phone-mockup-1.png";
 
 const PostVsReklama = () => {
   useEffect(() => {
@@ -33,7 +33,7 @@ const PostVsReklama = () => {
             </div>
             <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl"></div>
-              <img src={phoneMockupAds} alt="Facebook Ads Manager na telefonie" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
+              <img src={phoneMockup} alt="Facebook Ads Manager na telefonie" className="relative z-10 w-64 md:w-72 drop-shadow-2xl" />
             </div>
           </section>
 
