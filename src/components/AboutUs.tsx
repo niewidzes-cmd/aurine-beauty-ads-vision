@@ -1,4 +1,4 @@
-import { Heart, Target, Sparkles, MessageCircle, Eye, Headphones } from "lucide-react";
+import { Heart, Target, Sparkles, MessageCircle, Eye, Headphones, Lightbulb } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AboutUs = () => {
@@ -56,6 +56,20 @@ const AboutUs = () => {
               Każdą współpracę zaczynamy od rozmowy – chcemy poznać Ciebie, Twój salon i to, co jest dla Ciebie ważne. Dopiero wtedy tworzymy kampanię szytą na miarę, idealnie dopasowaną do Twojej sytuacji.
             </p>
           </div>
+
+          {/* Organic marketing card */}
+          <div className="lg:col-span-2 bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl md:rounded-3xl p-5 sm:p-6 md:p-8 hover:border-primary/30 transition-all duration-300 animate-fade-in-up group w-full" style={{ animationDelay: "0.2s" }}>
+            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-primary/20 rounded-2xl flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+              <Lightbulb className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
+            </div>
+            <h3 className="text-[1.25rem] leading-tight sm:text-2xl font-bold text-white mb-4 sm:mb-4">Pomagamy też w organicznym marketingu</h3>
+            <p className="text-white/80 leading-[1.6] mb-4 sm:mb-4 text-[0.9375rem] sm:text-base">
+              Nie ograniczamy się tylko do reklam płatnych. Doradzamy, jak budować profil Twojego salonu na Facebooku i Instagramie – co publikować, jak pisać posty, które przyciągną uwagę, i jak angażować lokalną społeczność.
+            </p>
+            <p className="text-white/80 leading-[1.6] text-[0.9375rem] sm:text-base">
+              Dobry profil to podstawa – klientki często sprawdzają social media przed umówieniem wizyty. Pomożemy Ci go prowadzić tak, żeby budził zaufanie i zachęcał do kontaktu.
+            </p>
+          </div>
         </div>
 
         {/* Values section */}
@@ -63,7 +77,7 @@ const AboutUs = () => {
           <h3 className="text-[1.5rem] leading-tight sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12 animate-fade-in">
             Nasze wartości
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
                 icon: MessageCircle,
@@ -80,15 +94,20 @@ const AboutUs = () => {
                 title: "Dostępność",
                 description: "Jesteśmy na wyciągnięcie ręki. Pisz, dzwoń, pytaj – odpowiadamy szybko i konkretnie.",
               },
+              {
+                icon: Target,
+                title: "Rezultaty",
+                description: "Liczy się to, co widzisz – więcej telefonów, pełniejszy terminarz i zadowolone klientki wracające do salonu.",
+              },
             ].map((value, index) => (
               <div
                 key={index}
                 className="text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:border-primary/30 transition-all duration-300 flex flex-col">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:border-primary/30 transition-all duration-300 flex flex-col group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
+                    <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <h4 className="text-[1.0625rem] leading-tight sm:text-xl font-semibold text-white mb-3 sm:mb-3">
                     {value.title}
