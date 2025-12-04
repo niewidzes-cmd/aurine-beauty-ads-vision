@@ -21,7 +21,7 @@ const CaseStudies = () => {
         roi: "ROAS 12.2x",
         period: "Grudzień 2024 - Luty 2025",
       },
-      testimonial: "Przemek ma świetne podejście – tłumaczy wszystko prostym językiem i nie wciska na siłę. Zima była zawsze martwa, a teraz pierwszy raz miałam pełen grafik w styczniu. Polecam każdej koleżance z branży!",
+      testimonial: "Przemek ma świetne podejście i naprawdę zależy mu na tym, żeby kampania działała. Zima była zawsze martwa, a teraz pierwszy raz miałam pełen grafik w styczniu. Polecam każdej koleżance z branży!",
       image: salonBeautyOstrow,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "70" },
@@ -40,7 +40,7 @@ const CaseStudies = () => {
         roi: "ROAS 14.8x",
         period: "Marzec 2025 - Kwiecień 2025",
       },
-      testimonial: "Otwierałam salon i stresowałam się, że nikt nie przyjdzie. W drugim tygodniu telefon nie przestawał dzwonić! Dziewczyny z okolic same mnie znajdowały. Nie wierzę, że to możliwe w Mławie.",
+      testimonial: "Otwierałam salon i stresowałam się, że nikt nie przyjdzie. W drugim tygodniu telefon nie przestawał dzwonić! Dziewczyny z okolic same mnie znajdowały. Świetna robota, polecam serdecznie.",
       image: studioMlawa,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "118" },
@@ -59,7 +59,7 @@ const CaseStudies = () => {
         roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
-      testimonial: "Dopiero zaczynamy współpracę, ale już widzę, że to działa. Nowe klientki na paznokcie i depilację przyszły w pierwszym tygodniu. Cieszę się, że trafiłam na kogoś, kto rozumie branżę beauty.",
+      testimonial: "Dopiero zaczynamy współpracę, ale już widzę, że to działa. Nowe klientki na paznokcie i depilację przyszły w pierwszym tygodniu. Cieszę się, że w końcu trafiłam na kogoś, kto rozumie branżę beauty.",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
