@@ -83,7 +83,7 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-0 sm:px-4 flex justify-center"
+                  className="w-full flex-shrink-0 px-0 sm:px-4 flex justify-center items-start"
                 >
                   <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 w-full">
                     {/* Stars */}
