@@ -1,5 +1,6 @@
-import { Heart, Target, Sparkles, MessageCircle, Eye, Headphones, Lightbulb } from "lucide-react";
+import { Heart, Target, Sparkles, MessageCircle, Eye, Headphones, Lightbulb, ArrowRight } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -66,9 +67,13 @@ const AboutUs = () => {
             <p className="text-white/80 leading-[1.6] mb-4 sm:mb-4 text-[0.9375rem] sm:text-base">
               Nie ograniczamy się tylko do reklam płatnych. Doradzamy, jak budować profil Twojego salonu na Facebooku i Instagramie – co publikować, jak pisać posty, które przyciągną uwagę, i jak angażować lokalną społeczność.
             </p>
-            <p className="text-white/80 leading-[1.6] text-[0.9375rem] sm:text-base">
+            <p className="text-white/80 leading-[1.6] mb-4 sm:mb-4 text-[0.9375rem] sm:text-base">
               Dobry profil to podstawa – klientki często sprawdzają social media przed umówieniem wizyty. Pomożemy Ci go prowadzić tak, żeby budził zaufanie i zachęcał do kontaktu.
             </p>
+            <Link to="/porady/jak-prowadzic-profil-salonu" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-[0.9375rem] sm:text-base font-medium group">
+              <span>Przeczytaj poradnik: Jak prowadzić profil salonu</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
 

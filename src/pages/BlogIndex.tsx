@@ -11,6 +11,7 @@ const BlogIndex = () => {
       description: "Większość właścicielek salonów myśli, że publikując post na Facebooku, dociera do swoich obserwatorów. Niestety, to mit. Zobacz, jaka jest różnica i dlaczego organiczny zasięg prawie nie istnieje.",
       readTime: "5 min",
       category: "Facebook Marketing",
+      order: 1,
     },
     {
       slug: "jak-prowadzic-profil-salonu",
@@ -18,6 +19,7 @@ const BlogIndex = () => {
       description: "Praktyczny poradnik - co publikować, jak często i jak budować zaangażowanie bez wydawania pieniędzy na reklamy. Dowiedz się, jak tworzyć wartościowe treści dla Twoich obserwatorów.",
       readTime: "7 min",
       category: "Social Media",
+      order: 2,
     },
     {
       slug: "kiedy-warto-reklamowac",
@@ -25,6 +27,23 @@ const BlogIndex = () => {
       description: "Nie każdy salon potrzebuje kampanii reklamowych od razu. Sprawdź, czy Twój biznes jest gotowy na płatne reklamy i co powinieneś wcześniej przygotować, żeby nie zmarnować budżetu.",
       readTime: "6 min",
       category: "Strategie",
+      order: 3,
+    },
+    {
+      slug: "jak-przygotowac-sie-do-kampanii",
+      title: "Jak przygotować się do pierwszej kampanii",
+      description: "Zanim wydasz pierwszy złoty na reklamy, upewnij się, że wszystko jest gotowe. Checklista i praktyczne wskazówki, które zwiększą skuteczność Twojej kampanii.",
+      readTime: "6 min",
+      category: "Przygotowanie",
+      order: 4,
+    },
+    {
+      slug: "jak-ocenic-skutecznosc-reklamy",
+      title: "Jak ocenić, czy reklama działa",
+      description: "Kampania działa, ale skąd wiesz, czy się opłaca? Poznaj kluczowe wskaźniki i dowiedz się, jak interpretować wyniki bez bycia ekspertem od marketingu.",
+      readTime: "5 min",
+      category: "Analiza",
+      order: 5,
     },
   ];
 
