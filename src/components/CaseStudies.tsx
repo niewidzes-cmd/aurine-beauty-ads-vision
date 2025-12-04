@@ -21,7 +21,7 @@ const CaseStudies = () => {
         roi: "ROAS 12.2x",
         period: "Grudzień 2024 - Luty 2025",
       },
-      testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym. Nie wierzę, że to możliwe w tak małym mieście. Naprawdę działa!",
+      testimonial: "Przemek ma świetne podejście – tłumaczy wszystko prostym językiem i nie wciska na siłę. Zima była zawsze martwa, a teraz pierwszy raz miałam pełen grafik w styczniu. Polecam każdej koleżance z branży!",
       image: salonBeautyOstrow,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "70" },
@@ -40,7 +40,7 @@ const CaseStudies = () => {
         roi: "ROAS 14.8x",
         period: "Marzec 2025 - Kwiecień 2025",
       },
-      testimonial: "Nie spodziewałam się, że tak szybko zobaczę efekty. Już w drugim tygodniu zaczęły dzwonić kobiety z mojego miasta i okolic. Aurine naprawdę wie, co robi i mogę na nich polegać.",
+      testimonial: "Otwierałam salon i stresowałam się, że nikt nie przyjdzie. W drugim tygodniu telefon nie przestawał dzwonić! Dziewczyny z okolic same mnie znajdowały. Nie wierzę, że to możliwe w Mławie.",
       image: studioMlawa,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "118" },
@@ -59,7 +59,7 @@ const CaseStudies = () => {
         roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
-      testimonial: "W sezonie letnim zależało mi na zapełnieniu kalendarza zabiegami. Kampania przyniosła szybkie efekty – nowe klientki zaczęły rezerwować już w pierwszym tygodniu.",
+      testimonial: "Dopiero zaczynamy współpracę, ale już widzę, że to działa. Nowe klientki na paznokcie i depilację przyszły w pierwszym tygodniu. Cieszę się, że trafiłam na kogoś, kto rozumie branżę beauty.",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
@@ -80,10 +80,10 @@ const CaseStudies = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in px-0 sm:px-4">
           <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-4">
-            Sprawdzone <span className="text-gradient-pink">rezultaty</span>
+            Co mówią nasze <span className="text-gradient-pink">klientki</span>
           </h2>
           <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
-            Konkretne wyniki kampanii naszych klientek z małych miast
+            Prawdziwe wyniki salonów, z którymi współpracujemy
           </p>
         </div>
 
@@ -106,9 +106,9 @@ const CaseStudies = () => {
 
         {/* Case study content */}
         <div className="max-w-6xl mx-auto px-0 sm:px-4">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+          <div key={activeCase} className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start animate-fade-in">
             {/* Left column - Image and stats */}
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-6">
               <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.2)] group cursor-pointer">
                 <img
                   src={currentCase.image}
@@ -135,7 +135,7 @@ const CaseStudies = () => {
             </div>
 
             {/* Right column - Details */}
-            <div className="space-y-6 animate-fade-in-up">
+            <div className="space-y-6">
               <div>
                 <h3 className="text-3xl font-bold text-white mb-2">
                   {currentCase.salon}
