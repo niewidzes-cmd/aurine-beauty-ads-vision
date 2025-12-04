@@ -1,4 +1,4 @@
-import { Heart, Target, Sparkles } from "lucide-react";
+import { Heart, Target, Sparkles, MessageCircle, Eye, Headphones } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AboutUs = () => {
@@ -66,14 +66,17 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
+                icon: MessageCircle,
                 title: "Komunikacja",
                 description: "Stawiamy na rozmowę. Chcemy Cię poznać, zrozumieć Twój salon i razem ustalić, co zadziała najlepiej.",
               },
               {
+                icon: Eye,
                 title: "Przejrzystość",
                 description: "Zawsze wiesz, co robimy i dlaczego. Żadnych ukrytych kosztów, żadnego marketingowego bełkotu.",
               },
               {
+                icon: Headphones,
                 title: "Dostępność",
                 description: "Jesteśmy na wyciągnięcie ręki. Pisz, dzwoń, pytaj – odpowiadamy szybko i konkretnie.",
               },
@@ -85,7 +88,7 @@ const AboutUs = () => {
               >
                 <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:border-primary/30 transition-all duration-300 flex flex-col">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-primary rounded-full"></div>
+                    <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
                   <h4 className="text-[1.0625rem] leading-tight sm:text-xl font-semibold text-white mb-3 sm:mb-3">
                     {value.title}
