@@ -59,7 +59,7 @@ const CaseStudies = () => {
         roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
-      testimonial: "W końcu trafiłam na kogoś, kto rozumie branżę beauty. Nowe klientki przychodzą same, a ja nie muszę się już stresować czy będą zapisy na następny tydzień.",
+      testimonial: "Współpracujemy od lipca i jestem mega zadowolona. Klientki przychodzą regularnie, a ja w końcu mogę skupić się na pracy zamiast martwić się skąd wziąć następne zapisy.",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
