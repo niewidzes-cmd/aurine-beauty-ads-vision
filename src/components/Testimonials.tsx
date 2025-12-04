@@ -16,25 +16,25 @@ const Testimonials = () => {
     {
       name: "Zuzanna W.",
       business: "Salon fryzjerski - Wołomin",
-      text: "Bardzo polecam Agencję Aurine, a zwłaszcza specjalistę Pana Przemka. Świetne podejście i wiedza dają szybkie efekty ;).",
+      text: "Bardzo polecam Agencję Aurine, a zwłaszcza specjalistę Pana Przemka. Świetne podejście i wiedza dają szybkie efekty. Od początku współpracy czuję się zaopiekowana - wszystko jest jasne, przejrzyste i bez zbędnego stresu. Widzę realną różnicę w liczbie nowych klientek 😊",
       rating: 5,
     },
     {
       name: "Magdalena W.",
       business: "Gabinet kosmetyczny - Marki",
-      text: "Serdecznie polecam. Pan Przemek ma super podejście, nawet trudne rzeczy wyjaśniał w prosty sposób.",
+      text: "Serdecznie polecam. Pan Przemek ma super podejście, nawet trudne rzeczy wyjaśniał w prosty sposób. Zawsze mogę liczyć na szybką odpowiedź i konkretne porady. Współpraca przebiega bardzo płynnie, a efekty są lepsze niż się spodziewałam!",
       rating: 5,
     },
     {
       name: "Aleksandra S.",
       business: "Studio urody - Ząbki",
-      text: "Profesjonalna obsługa i widoczne rezultaty. Polecam współpracę z Aurine każdej właścicielce salonu, która chce rozwijać swój biznes.",
+      text: "Profesjonalna obsługa i widoczne rezultaty. Polecam współpracę z Aurine każdej właścicielce salonu, która chce rozwijać swój biznes. Zespół naprawdę rozumie branżę beauty i wie, jak dotrzeć do odpowiednich klientek. Jestem pod wrażeniem ich zaangażowania!",
       rating: 5,
     },
     {
       name: "Karolina M.",
       business: "Salon kosmetyczny - Sulejówek",
-      text: "Współpraca z Aurine to strzał w dziesiątkę! Liczba klientek w moim salonie wzrosła o 60% w ciągu pierwszych dwóch miesięcy. Pełen profesjonalizm i zaangażowanie.",
+      text: "Współpraca z Aurine to strzał w dziesiątkę! Liczba klientek w moim salonie wzrosła znacząco w ciągu pierwszych dwóch miesięcy. Pełen profesjonalizm i zaangażowanie. Cenię sobie też to, że zawsze tłumaczą, co robią i dlaczego - dzięki temu uczę się przy okazji!",
       rating: 5,
     },
     {
