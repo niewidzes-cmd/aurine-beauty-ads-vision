@@ -17,15 +17,15 @@ const CaseStudies = () => {
       solution: "Kampania edukacyjna + promocje na zabiegi zimowe + remarketing",
       results: {
         clients: "70 rezerwacji",
-        revenue: "ROAS 12.2x",
-        roi: "95 konwersji",
+        revenue: "+14,000 zł",
+        roi: "ROAS 12.2x",
         period: "Grudzień 2024 - Luty 2025",
       },
       testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym. Nie wierzę, że to możliwe w tak małym mieście. Naprawdę działa!",
       image: salonBeautyOstrow,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "70" },
-        { icon: DollarSign, label: "Konwersje", value: "95" },
+        { icon: DollarSign, label: "Przychód", value: "+14k zł" },
         { icon: TrendingUp, label: "ROAS", value: "12.2x" },
       ],
     },
@@ -36,15 +36,15 @@ const CaseStudies = () => {
       solution: "Kampania z promocją otwarcia + targetowanie lokalnych kobiet 25-45 lat",
       results: {
         clients: "118 rezerwacji",
-        revenue: "ROAS 14.8x",
-        roi: "238 konwersji",
+        revenue: "+23,700 zł",
+        roi: "ROAS 14.8x",
         period: "Marzec 2025 - Kwiecień 2025",
       },
       testimonial: "Nie spodziewałam się, że tak szybko zobaczę efekty. Już w drugim tygodniu zaczęły dzwonić kobiety z mojego miasta i okolic. Aurine naprawdę wie, co robi i mogę na nich polegać.",
       image: studioMlawa,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "118" },
-        { icon: DollarSign, label: "Konwersje", value: "238" },
+        { icon: DollarSign, label: "Przychód", value: "+23.7k zł" },
         { icon: TrendingUp, label: "ROAS", value: "14.8x" },
       ],
     },
@@ -55,15 +55,15 @@ const CaseStudies = () => {
       solution: "Kampania targetująca zabiegi manicure, pedicure, depilacja + remarketing",
       results: {
         clients: "31 rezerwacji",
-        revenue: "ROAS 6.9x",
-        roi: "38 konwersji",
+        revenue: "+6,200 zł",
+        roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
       testimonial: "W sezonie letnim zależało mi na zapełnieniu kalendarza zabiegami. Kampania przyniosła szybkie efekty – nowe klientki zaczęły rezerwować już w pierwszym tygodniu.",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
-        { icon: DollarSign, label: "Konwersje", value: "38" },
+        { icon: DollarSign, label: "Przychód", value: "+6.2k zł" },
         { icon: TrendingUp, label: "ROAS", value: "6.9x" },
       ],
     },
@@ -171,11 +171,11 @@ const CaseStudies = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.roi}</span>
+                    <span className="text-white">{currentCase.results.revenue} przychodu</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.revenue}</span>
+                    <span className="text-white">{currentCase.results.roi}</span>
                   </div>
                   <div className="text-white/60 text-sm mt-3">
                     {currentCase.results.period}
