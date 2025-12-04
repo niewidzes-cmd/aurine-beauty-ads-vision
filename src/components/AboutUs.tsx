@@ -66,16 +66,16 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {[
               {
-                title: "Szczerość",
-                description: "Mówimy wprost, bez ściemy. Zawsze wiesz, co się dzieje z Twoją kampanią i na co idą pieniądze.",
+                title: "Komunikacja",
+                description: "Stawiamy na rozmowę. Chcemy Cię poznać, zrozumieć Twój salon i razem ustalić, co zadziała najlepiej.",
               },
               {
-                title: "Efekty",
-                description: "Liczy się to, co faktycznie widzisz – więcej telefonów, pełniejszy terminarz, zadowolone klientki.",
+                title: "Przejrzystość",
+                description: "Zawsze wiesz, co robimy i dlaczego. Żadnych ukrytych kosztów, żadnego marketingowego bełkotu.",
               },
               {
-                title: "Wsparcie",
-                description: "Nie zostawiamy Cię samej. Jesteśmy na telefon, pomagamy i szybko reagujemy na Twoje potrzeby.",
+                title: "Dostępność",
+                description: "Jesteśmy na wyciągnięcie ręki. Pisz, dzwoń, pytaj – odpowiadamy szybko i konkretnie.",
               },
             ].map((value, index) => (
               <div
