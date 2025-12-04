@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { TrendingUp, Users, DollarSign, ChevronRight } from "lucide-react";
-import caseChart1 from "@/assets/case-study-chart-1.png";
-import ostrowAnalytics from "@/assets/ostrow-analytics.png";
-import beforeAfter from "@/assets/case-study-before-after.png";
+import salonBeautyOstrow from "@/assets/case-study-salon-beauty.png";
+import studioMlawa from "@/assets/case-study-studio-mlawa.png";
+import beautyStudioNowySacz from "@/assets/case-study-beauty-studio-nowy-sacz.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const CaseStudies = () => {
@@ -11,60 +11,60 @@ const CaseStudies = () => {
 
   const caseStudies = [
     {
+      salon: "Salon Beauty - Ostrów Mazowiecka",
+      owner: "Magdalena",
+      challenge: "Sezonowość biznesu, puste terminy w miesiącach zimowych",
+      solution: "Kampania edukacyjna + promocje na zabiegi zimowe + remarketing",
+      results: {
+        clients: "70 rezerwacji",
+        revenue: "ROAS 12.2x",
+        roi: "95 konwersji",
+        period: "Grudzień 2024 - Luty 2025",
+      },
+      testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym. Nie wierzę, że to możliwe w tak małym mieście. Naprawdę działa!",
+      image: salonBeautyOstrow,
+      stats: [
+        { icon: Users, label: "Rezerwacje", value: "70" },
+        { icon: DollarSign, label: "Konwersje", value: "95" },
+        { icon: TrendingUp, label: "ROAS", value: "12.2x" },
+      ],
+    },
+    {
       salon: "Studio Urody - Mława",
       owner: "Katarzyna",
       challenge: "Nowy salon bez bazy klientek, potrzeba szybkiego rozruchu",
       solution: "Kampania z promocją otwarcia + targetowanie lokalnych kobiet 25-45 lat",
       results: {
-        clients: "32 nowe klientki",
-        revenue: "+18,000 zł",
-        roi: "ROI 3.2x",
-        period: "Pierwsze 2 miesiące",
+        clients: "118 rezerwacji",
+        revenue: "ROAS 14.8x",
+        roi: "238 konwersji",
+        period: "Marzec 2025 - Kwiecień 2025",
       },
       testimonial: "Nie spodziewałam się, że tak szybko zobaczę efekty. Już w drugim tygodniu zaczęły dzwonić kobiety z mojego miasta i okolic. Aurine naprawdę wie, co robi i mogę na nich polegać.",
-      image: caseChart1,
+      image: studioMlawa,
       stats: [
-        { icon: Users, label: "Nowe klientki", value: "32" },
-        { icon: DollarSign, label: "Przychód", value: "+18k zł" },
-        { icon: TrendingUp, label: "ROI", value: "3.2x" },
+        { icon: Users, label: "Rezerwacje", value: "118" },
+        { icon: DollarSign, label: "Konwersje", value: "238" },
+        { icon: TrendingUp, label: "ROAS", value: "14.8x" },
       ],
     },
     {
-      salon: "Gabinet Kosmetyczny - Ostrów Mazowiecka",
-      owner: "Magdalena",
-      challenge: "Sezonowość biznesu, puste terminy w miesiącach zimowych",
-      solution: "Kampania edukacyjna + promocje na zabiegi zimowe + remarketing",
-      results: {
-        clients: "102 nowych klientek",
-        revenue: "+8,970 zł",
-        roi: "ROI 13.0x",
-        period: "Grudzień 2024 - Luty 2025",
-      },
-      testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym. Nie wierzę, że to możliwe w tak małym mieście. Naprawdę działa!",
-      image: ostrowAnalytics,
-      stats: [
-        { icon: Users, label: "Nowe klientki", value: "102" },
-        { icon: DollarSign, label: "Przychód", value: "+8.9k zł" },
-        { icon: TrendingUp, label: "ROI", value: "13.0x" },
-      ],
-    },
-    {
-      salon: "Salon Beauty - Płońsk",
+      salon: "Beauty Studio - Nowy Sącz",
       owner: "Anna",
-      challenge: "Duża konkurencja w mieście, trudność w wyróżnieniu się",
-      solution: "Kampania z unikalną ofertą + kreacje premium + A/B testing",
+      challenge: "Zwiększenie liczby rezerwacji zabiegów letnich w nowym sezonie",
+      solution: "Kampania targetująca zabiegi manicure, pedicure, depilacja + remarketing",
       results: {
-        clients: "28 nowych klientek",
-        revenue: "+22,000 zł",
-        roi: "ROI 3.8x",
-        period: "2 miesiące",
+        clients: "31 rezerwacji",
+        revenue: "ROAS 6.9x",
+        roi: "38 konwersji",
+        period: "Lipiec 2025",
       },
-      testimonial: "W małym mieście jest kilka innych salonów. Myślałam, że ciężko będzie się przebić. Kampania pokazała, że profesjonalne podejście naprawdę robi różnicę – teraz klientki przychodzą właśnie do mnie.",
-      image: beforeAfter,
+      testimonial: "W sezonie letnim zależało mi na zapełnieniu kalendarza zabiegami. Kampania przyniosła szybkie efekty – nowe klientki zaczęły rezerwować już w pierwszym tygodniu.",
+      image: beautyStudioNowySacz,
       stats: [
-        { icon: Users, label: "Nowe klientki", value: "28" },
-        { icon: DollarSign, label: "Przychód", value: "+22k zł" },
-        { icon: TrendingUp, label: "ROI", value: "3.8x" },
+        { icon: Users, label: "Rezerwacje", value: "31" },
+        { icon: DollarSign, label: "Konwersje", value: "38" },
+        { icon: TrendingUp, label: "ROAS", value: "6.9x" },
       ],
     },
   ];
@@ -171,11 +171,11 @@ const CaseStudies = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.revenue} przychodu</span>
+                    <span className="text-white">{currentCase.results.roi}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.roi}</span>
+                    <span className="text-white">{currentCase.results.revenue}</span>
                   </div>
                   <div className="text-white/60 text-sm mt-3">
                     {currentCase.results.period}
