@@ -3,7 +3,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/ScrollToTop";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import AboutUsPage from "./pages/AboutUsPage";
 import BlogIndex from "./pages/BlogIndex";
@@ -23,23 +24,22 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/o-nas" element={<AboutUsPage />} />
-          <Route path="/porady" element={<BlogIndex />} />
-          <Route path="/porady/post-vs-reklama" element={<PostVsReklama />} />
-          <Route path="/porady/jak-prowadzic-profil-salonu" element={<JakProwadzicProfil />} />
-          <Route path="/porady/kiedy-warto-reklamowac" element={<KiedyWartoReklamowac />} />
-          <Route path="/porady/jak-przygotowac-sie-do-kampanii" element={<JakPrzygotowacSieDoKampanii />} />
-          <Route path="/porady/jak-ocenic-skutecznosc-reklamy" element={<JakOcenicSkutecznoscReklamy />} />
-          <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
-          <Route path="/regulamin" element={<TermsOfService />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="o-nas" element={<AboutUsPage />} />
+          <Route path="porady" element={<BlogIndex />} />
+          <Route path="porady/post-vs-reklama" element={<PostVsReklama />} />
+          <Route path="porady/jak-prowadzic-profil-salonu" element={<JakProwadzicProfil />} />
+          <Route path="porady/kiedy-warto-reklamowac" element={<KiedyWartoReklamowac />} />
+          <Route path="porady/jak-przygotowac-sie-do-kampanii" element={<JakPrzygotowacSieDoKampanii />} />
+          <Route path="porady/jak-ocenic-skutecznosc-reklamy" element={<JakOcenicSkutecznoscReklamy />} />
+          <Route path="polityka-prywatnosci" element={<PrivacyPolicy />} />
+          <Route path="regulamin" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
