@@ -80,10 +80,10 @@ const CaseStudies = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in px-0 sm:px-4">
           <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-4">
-            Prawdziwe <span className="text-gradient-pink">historie</span>
+            Sprawdzone <span className="text-gradient-pink">rezultaty</span>
           </h2>
           <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
-            Salony z małych miast, którym pomogliśmy – może Twój będzie następny
+            Konkretne wyniki kampanii naszych klientek z małych miast
           </p>
         </div>
 

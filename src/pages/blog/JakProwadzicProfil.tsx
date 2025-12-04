@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ArticleProgress from "@/components/ArticleProgress";
 
 const JakProwadzicProfil = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const JakProwadzicProfil = () => {
               { label: "Jak prowadzić profil salonu na Facebooku", href: "/porady/jak-prowadzic-profil-salonu" }
             ]}
           />
+          <ArticleProgress currentArticle={2} />
 
           <Link
             to="/porady"
