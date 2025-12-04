@@ -21,7 +21,7 @@ const CaseStudies = () => {
         roi: "ROAS 12.2x",
         period: "Grudzień 2024 - Luty 2025",
       },
-      testimonial: "Przemek ma świetne podejście i naprawdę zależy mu na tym, żeby kampania działała. Zima była zawsze martwa, a teraz pierwszy raz miałam pełen grafik w styczniu. Polecam każdej koleżance z branży!",
+      testimonial: "Przemek to bardzo przyjemna osoba, wszystko tłumaczy spokojnie i po ludzku. Zima była zawsze martwa, a teraz pierwszy raz miałam pełen grafik w styczniu. Super współpraca!",
       image: salonBeautyOstrow,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "70" },
@@ -40,7 +40,7 @@ const CaseStudies = () => {
         roi: "ROAS 14.8x",
         period: "Marzec 2025 - Kwiecień 2025",
       },
-      testimonial: "Otwierałam salon i stresowałam się, że nikt nie przyjdzie. W drugim tygodniu telefon nie przestawał dzwonić! Dziewczyny z okolic same mnie znajdowały. Świetna robota, polecam serdecznie.",
+      testimonial: "Przemek ma świetne podejście, czuć że zależy mu na wynikach. Otwierałam salon i bałam się, że nikt nie przyjdzie, a telefon nie przestawał dzwonić! Polecam każdej dziewczynie z branży.",
       image: studioMlawa,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "118" },
