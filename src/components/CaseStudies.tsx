@@ -40,7 +40,7 @@ const CaseStudies = () => {
         roi: "ROAS 14.8x",
         period: "Marzec 2025 - Kwiecień 2025",
       },
-      testimonial: "Z Przemkiem współpracuje się naprawdę przyjemnie. Świetne podejście, wszystko tłumaczy po ludzku i czuć że mu zależy. Otwierałam salon i bałam się że nikt nie przyjdzie, a telefon nie przestawał dzwonić!",
+      testimonial: "Świetna komunikacja z całym zespołem, zawsze można się dodzwonić i wszystko jest na bieżąco wyjaśniane. Czuć profesjonalizm i to że naprawdę zależy im na wynikach.",
       image: studioMlawa,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "118" },
@@ -59,7 +59,7 @@ const CaseStudies = () => {
         roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
-      testimonial: "Dopiero zaczynamy, ale już widzę że to działa. Przemek jest bardzo pomocny i cierpliwy, wszystko wyjaśnia krok po kroku. Nowe klientki przyszły już w pierwszym tygodniu!",
+      testimonial: "Zaczęłyśmy współpracę w lipcu i jestem bardzo zadowolona. Efekty widać od razu, a ja mogę spokojnie skupić się na pracy w salonie zamiast martwić się o marketing.",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
