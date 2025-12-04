@@ -110,14 +110,14 @@ const AboutUs = () => {
                 className="text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:border-primary/30 transition-all duration-300 flex flex-col group">
+                <div className="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 hover:border-primary/30 transition-all duration-300 flex flex-col group h-full">
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:scale-110 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
                     <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   <h4 className="text-[1.0625rem] leading-tight sm:text-xl font-semibold text-white mb-3 sm:mb-3">
                     {value.title}
                   </h4>
-                  <p className="text-white/70 leading-[1.6] text-[0.9375rem] sm:text-base">
+                  <p className="text-white/70 leading-[1.6] text-[0.9375rem] sm:text-base flex-grow">
                     {value.description}
                   </p>
                 </div>
