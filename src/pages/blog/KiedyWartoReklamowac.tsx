@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import ArticleProgress from "@/components/ArticleProgress";
 
 const KiedyWartoReklamowac = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const KiedyWartoReklamowac = () => {
       <article className="pt-24 sm:pt-28 md:pt-32 pb-20">
         <div className="container mx-auto px-6 max-w-6xl">
           <Breadcrumbs items={[{ label: "Porady", href: "/porady" }, { label: "Kiedy warto inwestować w reklamy", href: "/porady/kiedy-warto-reklamowac" }]} />
+          <ArticleProgress currentArticle={3} />
           <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors mb-8"><ArrowLeft className="w-4 h-4" />Powrót do porad</Link>
 
           <section className="mb-20">
