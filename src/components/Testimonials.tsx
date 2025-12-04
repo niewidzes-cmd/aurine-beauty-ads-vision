@@ -40,7 +40,7 @@ const Testimonials = () => {
     {
       name: "Natalia K.",
       business: "Gabinet beauty - Piastów",
-      text: "Nareszcie trafiliśmy na agencję, która naprawdę rozumie specyfikę branży beauty. Pan Przemek doskonale wie, jak dotrzeć do naszych klientek. Efekty przeszły nasze oczekiwania!",
+      text: "Współpraca z Aurine to czysta przyjemność. Kontakt jest świetny, zawsze mogę napisać z pytaniem i dostaję szybką, jasną odpowiedź. Wszystko tłumaczą normalnie, po ludzku. Widać, że naprawdę znają się na tym, co robią, i zależy im, żeby współpraca przebiegała sprawnie. Jestem bardzo zadowolona i polecam każdemu salonowi beauty!",
       rating: 5,
     },
     {
