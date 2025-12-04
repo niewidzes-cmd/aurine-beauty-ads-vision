@@ -59,7 +59,7 @@ const CaseStudies = () => {
         roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
-      testimonial: "Współpracujemy od lipca i nie żałuję ani złotówki. Nowe dziewczyny same się zapisują, a ja mam spokojną głowę. Polecam każdej, kto prowadzi salon!",
+      testimonial: "Szczerze? Najlepsza decyzja jaką podjęłam dla mojego salonu. Działamy razem od lipca i widzę że to po prostu działa. Serdecznie polecam!",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
