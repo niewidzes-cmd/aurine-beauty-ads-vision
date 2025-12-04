@@ -1,4 +1,4 @@
-import { ArrowLeft, Clock, XCircle, CheckCircle, TrendingUp, AlertTriangle, Star, Camera, Calendar } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, XCircle, CheckCircle, TrendingUp, AlertTriangle, Star, Camera, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
@@ -26,6 +26,10 @@ const KiedyWartoReklamowac = () => {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Kiedy warto <span className="text-gradient-pink">inwestować w reklamy</span></h1>
             <p className="text-xl text-white/70 leading-relaxed max-w-3xl">Płatne reklamy to nie jest rozwiązanie dla każdego salonu i na każdym etapie. <strong className="text-white">Sprawdź, czy Twój biznes jest gotowy.</strong></p>
+            <Link to="/porady/jak-prowadzic-profil-salonu" className="inline-flex items-center gap-2 text-primary/70 hover:text-primary transition-colors mt-4 text-sm">
+              <ArrowLeft className="w-3 h-3" />
+              <span>Poprzedni artykuł: Jak prowadzić profil salonu na Facebooku</span>
+            </Link>
           </section>
 
           <section className="mb-20">
@@ -122,6 +126,15 @@ const KiedyWartoReklamowac = () => {
               </div>
             </div>
           </section>
+
+          {/* Next article link */}
+          <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 mb-8">
+            <p className="text-white/60 text-sm mb-2">Następny artykuł w serii:</p>
+            <Link to="/porady/jak-przygotowac-sie-do-kampanii" className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors group">
+              <span className="text-lg font-semibold">Jak przygotować się do pierwszej kampanii</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
             <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors"><ArrowLeft className="w-4 h-4" />Wszystkie porady</Link>

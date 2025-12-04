@@ -1,4 +1,4 @@
-import { ArrowLeft, Clock, TrendingUp, Users, Target, Eye } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, TrendingUp, Users, Target, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
@@ -99,6 +99,15 @@ const PostVsReklama = () => {
               </div>
             </div>
           </section>
+
+          {/* Next article link */}
+          <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 mb-8">
+            <p className="text-white/60 text-sm mb-2">Następny artykuł w serii:</p>
+            <Link to="/porady/jak-prowadzic-profil-salonu" className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors group">
+              <span className="text-lg font-semibold">Jak prowadzić profil salonu na Facebooku</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
             <Link to="/porady" className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors"><ArrowLeft className="w-4 h-4" />Wszystkie porady</Link>

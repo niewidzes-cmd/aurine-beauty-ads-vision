@@ -10,6 +10,8 @@ import BlogIndex from "./pages/BlogIndex";
 import PostVsReklama from "./pages/blog/PostVsReklama";
 import JakProwadzicProfil from "./pages/blog/JakProwadzicProfil";
 import KiedyWartoReklamowac from "./pages/blog/KiedyWartoReklamowac";
+import JakPrzygotowacSieDoKampanii from "./pages/blog/JakPrzygotowacSieDoKampanii";
+import JakOcenicSkutecznoscReklamy from "./pages/blog/JakOcenicSkutecznoscReklamy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/porady/post-vs-reklama" element={<PostVsReklama />} />
           <Route path="/porady/jak-prowadzic-profil-salonu" element={<JakProwadzicProfil />} />
           <Route path="/porady/kiedy-warto-reklamowac" element={<KiedyWartoReklamowac />} />
+          <Route path="/porady/jak-przygotowac-sie-do-kampanii" element={<JakPrzygotowacSieDoKampanii />} />
+          <Route path="/porady/jak-ocenic-skutecznosc-reklamy" element={<JakOcenicSkutecznoscReklamy />} />
           <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
           <Route path="/regulamin" element={<TermsOfService />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

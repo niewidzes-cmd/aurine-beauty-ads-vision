@@ -1,4 +1,4 @@
-import { ArrowLeft, Clock, Camera, MessageCircle, Calendar, AlertTriangle, CheckCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Camera, MessageCircle, Calendar, AlertTriangle, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
@@ -58,6 +58,10 @@ const JakProwadzicProfil = () => {
               Tworzenie wartościowych treści i budowanie społeczności wokół salonu nie wymaga dużego budżetu. 
               <strong className="text-white"> Wystarczy plan i konsekwencja.</strong>
             </p>
+            <Link to="/porady/post-vs-reklama" className="inline-flex items-center gap-2 text-primary/70 hover:text-primary transition-colors mt-4 text-sm">
+              <ArrowLeft className="w-3 h-3" />
+              <span>Poprzedni artykuł: Post na Facebooku ≠ Reklama</span>
+            </Link>
           </section>
 
           {/* Section 1 - What to publish */}
@@ -312,6 +316,15 @@ const JakProwadzicProfil = () => {
               </div>
             </div>
           </section>
+
+          {/* Next article link */}
+          <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-2xl p-6 mb-8">
+            <p className="text-white/60 text-sm mb-2">Następny artykuł w serii:</p>
+            <Link to="/porady/kiedy-warto-reklamowac" className="inline-flex items-center gap-2 text-white hover:text-primary transition-colors group">
+              <span className="text-lg font-semibold">Kiedy warto inwestować w reklamy</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
           {/* Footer navigation */}
           <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
