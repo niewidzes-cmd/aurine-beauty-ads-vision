@@ -8,9 +8,15 @@ const Testimonials = () => {
 
   const testimonials = [
     {
+      name: "Wioletta S.",
+      business: "Salon kosmetyczny - Grodzisk Mazowiecki",
+      text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm. Świetna współpraca, wszystko wytłumaczone krok po kroku, pierwsze efekty były po kilku dniach.",
+      rating: 5,
+    },
+    {
       name: "Zuzanna W.",
-      business: "Salon kosmetyczny - Wołomin",
-      text: "Bardzo jasne tłumaczenie każdego etapu i realne efekty, a reklamy zaczęły przyciągać klientki od pierwszego tygodnia.",
+      business: "Salon fryzjerski - Wołomin",
+      text: "Bardzo polecam Agencję Aurine, a zwłaszcza specjalistę Pana Przemka. Świetne podejście i wiedza dają szybkie efekty ;).",
       rating: 5,
     },
     {
@@ -20,27 +26,27 @@ const Testimonials = () => {
       rating: 5,
     },
     {
-      name: "Wioletta S.",
-      business: "Salon beauty - Grodzisk Mazowiecki",
-      text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm.",
+      name: "Aleksandra S.",
+      business: "Studio urody - Ząbki",
+      text: "Profesjonalna obsługa i widoczne rezultaty. Polecam współpracę z Aurine każdej właścicielce salonu, która chce rozwijać swój biznes.",
       rating: 5,
     },
     {
       name: "Karolina M.",
-      business: "Salon fryzjerski - Legionowo",
-      text: "Współpraca z Aurine to czysta przyjemność. Kontakt jest świetny, zawsze mogę napisać z pytaniem i dostaję szybką, jasną odpowiedź. Wszystko tłumaczą normalnie, po ludzku. Widać, że naprawdę znają się na tym, co robią, i zależy im, żeby współpraca przebiegała sprawnie. Jestem bardzo zadowolona i polecam każdemu salonowi beauty!",
+      business: "Salon kosmetyczny - Sulejówek",
+      text: "Współpraca z Aurine to strzał w dziesiątkę! Liczba klientek w moim salonie wzrosła o 60% w ciągu pierwszych dwóch miesięcy. Pełen profesjonalizm i zaangażowanie.",
       rating: 5,
     },
     {
-      name: "Anna K.",
-      business: "Gabinet medycyny estetycznej - Piaseczno",
-      text: "Jestem bardzo zadowolona ze współpracy z Aurine. Świetne wyniki, zawsze dostępni i pomocni. Polecam z całego serca!",
+      name: "Natalia K.",
+      business: "Gabinet beauty - Piastów",
+      text: "Nareszcie trafiliśmy na agencję, która naprawdę rozumie specyfikę branży beauty. Pan Przemek doskonale wie, jak dotrzeć do naszych klientek. Efekty przeszły nasze oczekiwania!",
       rating: 5,
     },
     {
-      name: "Patrycja D.",
-      business: "Studio stylizacji paznokci - Otwock",
-      text: "Współpracuję z Aurine już od kilku miesięcy i z pełnym przekonaniem mogę polecić Przemka i cały zespół. Naprawdę wiedzą, jak robić marketing lokalny i przyciągać klientów. Chętnie dzielą się wiedzą, tłumaczą wszystko krok po kroku i cierpliwie pomagają, jeśli dopiero uczysz się marketingu. Dzięki nim zauważyłam realny wzrost zainteresowania moimi usługami i efekty ich pracy są naprawdę widoczne.",
+      name: "Joanna B.",
+      business: "Studio stylizacji - Kobyłka",
+      text: "Bardzo profesjonalne podejście i konkretne rezultaty. Reklamy są świetnie dopasowane, a calendar wizyt jest teraz pełny. Z czystym sumieniem polecam Aurine!",
       rating: 5,
     },
   ];
@@ -83,26 +89,23 @@ const Testimonials = () => {
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="w-full flex-shrink-0 px-0 sm:px-4"
+                  className="w-full flex-shrink-0 px-0 sm:px-4 flex justify-center"
                 >
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 w-full h-[420px] sm:h-[380px] flex flex-col">
-                    {/* Content area - centered */}
-                    <div className="flex-1 flex flex-col items-center justify-center">
-                      {/* Stars */}
-                      <div className="flex gap-1 justify-center mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-                        ))}
-                      </div>
-
-                      {/* Review text */}
-                      <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed text-center">
-                        "{testimonial.text}"
-                      </p>
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full">
+                    {/* Stars */}
+                    <div className="flex gap-1 mb-3 sm:mb-4 justify-center">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
+                      ))}
                     </div>
 
-                    {/* Author - always at bottom */}
-                    <div className="text-center border-t border-white/10 pt-4 mt-4">
+                    {/* Review text */}
+                    <p className="text-sm sm:text-base md:text-lg text-white/90 mb-5 sm:mb-6 leading-relaxed text-center">
+                      "{testimonial.text}"
+                    </p>
+
+                    {/* Author */}
+                    <div className="text-center border-t border-white/10 pt-3 sm:pt-4">
                       <div className="font-semibold text-white text-sm sm:text-base">
                         {testimonial.name}
                       </div>
