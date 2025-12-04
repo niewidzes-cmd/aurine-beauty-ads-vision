@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TrendingUp, Users, DollarSign, ChevronRight } from "lucide-react";
+import { TrendingUp, Users, DollarSign, ChevronRight, MapPin, Quote } from "lucide-react";
 import caseChart1 from "@/assets/case-study-chart-1.png";
 import ostrowAnalytics from "@/assets/ostrow-analytics.png";
 import beforeAfter from "@/assets/case-study-before-after.png";
@@ -11,188 +11,214 @@ const CaseStudies = () => {
 
   const caseStudies = [
     {
-      salon: "Studio Urody - Mława",
+      salon: "Studio Urody",
+      location: "Mława",
       owner: "Katarzyna",
       challenge: "Nowy salon bez bazy klientek, potrzeba szybkiego rozruchu",
       solution: "Kampania z promocją otwarcia + targetowanie lokalnych kobiet 25-45 lat",
       results: {
-        clients: "32 nowe klientki",
+        clients: "32",
+        clientsLabel: "nowych klientek",
         revenue: "+18,000 zł",
-        roi: "ROI 3.2x",
+        roi: "3.2x",
         period: "Pierwsze 2 miesiące",
       },
-      testimonial: "Nie spodziewałam się, że tak szybko zobaczę efekty. Już w drugim tygodniu zaczęły dzwonić kobiety z mojego miasta i okolic. Aurine naprawdę wie, co robi i mogę na nich polegać.",
+      testimonial: "Nie spodziewałam się, że tak szybko zobaczę efekty. Już w drugim tygodniu zaczęły dzwonić kobiety z mojego miasta i okolic.",
       image: caseChart1,
-      stats: [
-        { icon: Users, label: "Nowe klientki", value: "32" },
-        { icon: DollarSign, label: "Przychód", value: "+18k zł" },
-        { icon: TrendingUp, label: "ROI", value: "3.2x" },
-      ],
     },
     {
-      salon: "Gabinet Kosmetyczny - Ostrów Mazowiecka",
+      salon: "Gabinet Kosmetyczny",
+      location: "Ostrów Mazowiecka",
       owner: "Magdalena",
       challenge: "Sezonowość biznesu, puste terminy w miesiącach zimowych",
       solution: "Kampania edukacyjna + promocje na zabiegi zimowe + remarketing",
       results: {
-        clients: "102 nowych klientek",
+        clients: "102",
+        clientsLabel: "nowych klientek",
         revenue: "+8,970 zł",
-        roi: "ROI 13.0x",
+        roi: "13.0x",
         period: "Grudzień 2024 - Luty 2025",
       },
-      testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym. Nie wierzę, że to możliwe w tak małym mieście. Naprawdę działa!",
+      testimonial: "Zima zawsze była ciężka – połowa terminów pusta. Dzięki Aurine pierwszy raz miałam pełen grafik w styczniu i lutym.",
       image: ostrowAnalytics,
-      stats: [
-        { icon: Users, label: "Nowe klientki", value: "102" },
-        { icon: DollarSign, label: "Przychód", value: "+8.9k zł" },
-        { icon: TrendingUp, label: "ROI", value: "13.0x" },
-      ],
     },
     {
-      salon: "Salon Beauty - Płońsk",
+      salon: "Salon Beauty",
+      location: "Płońsk",
       owner: "Anna",
       challenge: "Duża konkurencja w mieście, trudność w wyróżnieniu się",
       solution: "Kampania z unikalną ofertą + kreacje premium + A/B testing",
       results: {
-        clients: "28 nowych klientek",
+        clients: "28",
+        clientsLabel: "nowych klientek",
         revenue: "+22,000 zł",
-        roi: "ROI 3.8x",
+        roi: "3.8x",
         period: "2 miesiące",
       },
-      testimonial: "W małym mieście jest kilka innych salonów. Myślałam, że ciężko będzie się przebić. Kampania pokazała, że profesjonalne podejście naprawdę robi różnicę – teraz klientki przychodzą właśnie do mnie.",
+      testimonial: "W małym mieście jest kilka innych salonów. Kampania pokazała, że profesjonalne podejście naprawdę robi różnicę.",
       image: beforeAfter,
-      stats: [
-        { icon: Users, label: "Nowe klientki", value: "28" },
-        { icon: DollarSign, label: "Przychód", value: "+22k zł" },
-        { icon: TrendingUp, label: "ROI", value: "3.8x" },
-      ],
     },
   ];
 
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section ref={ref} id="case-studies" className={`section-padding bg-[#0a0a0a] relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      {/* Background decoration */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 blur-3xl rounded-full" />
-
-      <div className="container mx-auto relative z-10">
-        <div className="text-center mb-12 sm:mb-16 animate-fade-in px-0 sm:px-4">
-          <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-4">
-            Sprawdzone <span className="text-gradient-pink">rezultaty</span>
+    <section ref={ref} id="case-studies" className={`py-20 md:py-32 bg-black relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -translate-y-1/2" />
+      
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
+            <TrendingUp className="w-4 h-4 text-primary" />
+            <span className="text-sm text-primary font-medium">Weryfikowalne wyniki</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Nie obiecujemy.<br />
+            <span className="text-gradient-pink">Pokazujemy liczby.</span>
           </h2>
-          <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
-            Konkretne wyniki kampanii naszych klientek z małych miast
+          <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
+            Realne kampanie. Realne salony. Realne wyniki z małych miast wokół Warszawy.
           </p>
         </div>
 
-        {/* Case study selector */}
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-0 sm:px-4">
-          {caseStudies.map((study, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveCase(index)}
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all text-sm sm:text-base ${
-                activeCase === index
-                  ? "bg-primary text-white shadow-[0_0_20px_hsl(328,100%,54%/0.4)]"
-                  : "bg-white/5 text-white/60 hover:bg-white/10 hover:text-white border border-white/10"
+        {/* Main content */}
+        <div className="max-w-6xl mx-auto">
+          {/* Stats highlight bar */}
+          <div className="grid grid-cols-3 gap-4 mb-12">
+            <div 
+              className={`text-center p-6 md:p-8 rounded-2xl transition-all duration-500 cursor-pointer ${
+                activeCase === 0 ? 'bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/50 scale-105' : 'bg-white/5 border border-white/10 hover:border-white/20'
               }`}
+              onClick={() => setActiveCase(0)}
             >
-              {study.salon}
-            </button>
-          ))}
-        </div>
+              <div className="text-3xl md:text-5xl font-bold text-white mb-2">32</div>
+              <div className="text-xs md:text-sm text-white/60">klientki w 2 mies.</div>
+              <div className="text-xs text-primary mt-2 font-medium">Mława</div>
+            </div>
+            <div 
+              className={`text-center p-6 md:p-8 rounded-2xl transition-all duration-500 cursor-pointer ${
+                activeCase === 1 ? 'bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/50 scale-105' : 'bg-white/5 border border-white/10 hover:border-white/20'
+              }`}
+              onClick={() => setActiveCase(1)}
+            >
+              <div className="text-3xl md:text-5xl font-bold text-white mb-2">13x</div>
+              <div className="text-xs md:text-sm text-white/60">zwrot z inwestycji</div>
+              <div className="text-xs text-primary mt-2 font-medium">Ostrów Maz.</div>
+            </div>
+            <div 
+              className={`text-center p-6 md:p-8 rounded-2xl transition-all duration-500 cursor-pointer ${
+                activeCase === 2 ? 'bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary/50 scale-105' : 'bg-white/5 border border-white/10 hover:border-white/20'
+              }`}
+              onClick={() => setActiveCase(2)}
+            >
+              <div className="text-3xl md:text-5xl font-bold text-white mb-2">+22k</div>
+              <div className="text-xs md:text-sm text-white/60">przychód</div>
+              <div className="text-xs text-primary mt-2 font-medium">Płońsk</div>
+            </div>
+          </div>
 
-        {/* Case study content */}
-        <div className="max-w-6xl mx-auto px-0 sm:px-4">
-          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-start">
-            {/* Left column - Image and stats */}
-            <div className="space-y-6 animate-fade-in">
-              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.2)] group cursor-pointer">
+          {/* Case study detail card */}
+          <div className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-3xl overflow-hidden">
+            <div className="grid lg:grid-cols-2">
+              {/* Left - Image */}
+              <div className="relative p-6 lg:p-8">
+                <div className="absolute top-6 left-6 lg:top-8 lg:left-8 z-10">
+                  <div className="flex items-center gap-2 bg-black/80 backdrop-blur-sm rounded-full px-4 py-2">
+                    <MapPin className="w-4 h-4 text-primary" />
+                    <span className="text-white text-sm font-medium">{currentCase.salon} • {currentCase.location}</span>
+                  </div>
+                </div>
                 <img
                   src={currentCase.image}
-                  alt={`Case study ${currentCase.salon}`}
-                  className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
+                  alt={`Wyniki kampanii ${currentCase.salon}`}
+                  className="w-full h-auto rounded-2xl"
                 />
               </div>
 
-              {/* Stats grid */}
-              <div className="grid grid-cols-3 gap-3 sm:gap-4">
-                {currentCase.stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-3 sm:p-4 text-center hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_0_20px_hsl(328,100%,54%/0.2)] cursor-pointer group hover:from-white/15 hover:to-white/10"
-                  >
-                    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary mx-auto mb-2 group-hover:scale-110 transition-transform duration-500 group-hover:drop-shadow-[0_0_8px_hsl(328,100%,54%)]" />
-                    <div className="text-lg sm:text-2xl font-bold text-white mb-1 group-hover:text-primary transition-colors duration-300">
-                      {stat.value}
+              {/* Right - Details */}
+              <div className="p-6 lg:p-10 flex flex-col justify-center">
+                {/* Big stats */}
+                <div className="grid grid-cols-3 gap-4 mb-8">
+                  <div className="text-center">
+                    <div className="flex items-center justify-center gap-1 mb-1">
+                      <Users className="w-5 h-5 text-primary" />
                     </div>
-                    <div className="text-[10px] sm:text-xs text-white/60 leading-tight group-hover:text-white/80 transition-colors duration-300">{stat.label}</div>
+                    <div className="text-2xl md:text-3xl font-bold text-white">{currentCase.results.clients}</div>
+                    <div className="text-xs text-white/50">{currentCase.results.clientsLabel}</div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right column - Details */}
-            <div className="space-y-6 animate-fade-in-up">
-              <div>
-                <h3 className="text-3xl font-bold text-white mb-2">
-                  {currentCase.salon}
-                </h3>
-                <p className="text-white/60">Właścicielka: {currentCase.owner}</p>
-              </div>
-
-              {/* Challenge */}
-              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_20px_hsl(328,100%,54%/0.15)] hover:scale-[1.02] cursor-pointer group hover:from-white/10 hover:to-white/5">
-                <h4 className="text-primary font-semibold mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full group-hover:scale-125 transition-transform duration-300"></span>
-                  Wyzwanie
-                </h4>
-                <p className="text-white/80 group-hover:text-white/90 transition-colors duration-300">{currentCase.challenge}</p>
-              </div>
-
-              {/* Solution */}
-              <div className="bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_20px_hsl(328,100%,54%/0.15)] hover:scale-[1.02] cursor-pointer group hover:from-white/10 hover:to-white/5">
-                <h4 className="text-primary font-semibold mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full group-hover:scale-125 transition-transform duration-300"></span>
-                  Nasze rozwiązanie
-                </h4>
-                <p className="text-white/80 group-hover:text-white/90 transition-colors duration-300">{currentCase.solution}</p>
-              </div>
-
-              {/* Results box */}
-              <div className="bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30 rounded-xl p-6 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_30px_hsl(328,100%,54%/0.3)] hover:scale-[1.02] cursor-pointer group hover:from-primary/30 hover:to-primary/10">
-                <h4 className="text-white font-semibold mb-3 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-all duration-300">Wyniki kampanii:</h4>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.clients}</span>
+                  <div className="text-center border-x border-white/10">
+                    <div className="flex items-center justify-center gap-1 mb-1">
+                      <DollarSign className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="text-2xl md:text-3xl font-bold text-white">{currentCase.results.revenue}</div>
+                    <div className="text-xs text-white/50">przychodu</div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.revenue} przychodu</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <ChevronRight className="w-4 h-4 text-primary" />
-                    <span className="text-white">{currentCase.results.roi}</span>
-                  </div>
-                  <div className="text-white/60 text-sm mt-3">
-                    {currentCase.results.period}
+                  <div className="text-center">
+                    <div className="flex items-center justify-center gap-1 mb-1">
+                      <TrendingUp className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary">{currentCase.results.roi}</div>
+                    <div className="text-xs text-white/50">ROI</div>
                   </div>
                 </div>
-              </div>
 
-              {/* Testimonial */}
-              <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 italic hover:border-primary/40 transition-all duration-500 hover:shadow-[0_0_25px_hsl(328,100%,54%/0.2)] hover:scale-[1.02] cursor-pointer group hover:from-white/15 hover:to-white/10">
-                <p className="text-white/90 leading-relaxed group-hover:text-white transition-colors duration-300">
-                  "{currentCase.testimonial}"
-                </p>
-                <p className="text-primary font-semibold mt-4 group-hover:drop-shadow-[0_0_8px_hsl(328,100%,54%)] transition-all duration-300">
-                  – {currentCase.owner}
-                </p>
+                {/* Challenge & Solution */}
+                <div className="space-y-4 mb-8">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-2 h-2 rounded-full bg-red-400" />
+                      <span className="text-sm font-medium text-white/60">Wyzwanie</span>
+                    </div>
+                    <p className="text-white/80">{currentCase.challenge}</p>
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                      <span className="text-sm font-medium text-white/60">Rozwiązanie</span>
+                    </div>
+                    <p className="text-white/80">{currentCase.solution}</p>
+                  </div>
+                </div>
+
+                {/* Testimonial */}
+                <div className="bg-white/5 rounded-2xl p-6 relative">
+                  <Quote className="w-8 h-8 text-primary/30 absolute top-4 left-4" />
+                  <p className="text-white/90 italic pl-8 leading-relaxed">
+                    "{currentCase.testimonial}"
+                  </p>
+                  <div className="mt-4 pl-8 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <span className="text-primary font-bold">{currentCase.owner[0]}</span>
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">{currentCase.owner}</p>
+                      <p className="text-white/50 text-sm">{currentCase.salon}, {currentCase.location}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Period */}
+                <div className="mt-6 text-center">
+                  <span className="text-xs text-white/40 uppercase tracking-wider">{currentCase.results.period}</span>
+                </div>
               </div>
             </div>
+          </div>
+
+          {/* Pagination dots */}
+          <div className="flex justify-center gap-2 mt-8">
+            {caseStudies.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveCase(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  activeCase === index ? 'w-8 bg-primary' : 'bg-white/20 hover:bg-white/40'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </div>
