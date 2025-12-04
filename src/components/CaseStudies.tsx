@@ -40,7 +40,7 @@ const CaseStudies = () => {
         roi: "ROAS 14.8x",
         period: "Marzec 2025 - Kwiecień 2025",
       },
-      testimonial: "Przemek ma świetne podejście, czuć że zależy mu na wynikach. Otwierałam salon i bałam się, że nikt nie przyjdzie, a telefon nie przestawał dzwonić! Polecam każdej dziewczynie z branży.",
+      testimonial: "Z Przemkiem współpracuje się naprawdę przyjemnie. Świetne podejście, wszystko tłumaczy po ludzku i czuć że mu zależy. Otwierałam salon i bałam się że nikt nie przyjdzie, a telefon nie przestawał dzwonić!",
       image: studioMlawa,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "118" },
@@ -59,7 +59,7 @@ const CaseStudies = () => {
         roi: "ROAS 6.9x",
         period: "Lipiec 2025",
       },
-      testimonial: "Dopiero zaczynamy współpracę, ale już widzę, że to działa. Nowe klientki na paznokcie i depilację przyszły w pierwszym tygodniu. Cieszę się, że w końcu trafiłam na kogoś, kto rozumie branżę beauty.",
+      testimonial: "Dopiero zaczynamy, ale już widzę że to działa. Przemek jest bardzo pomocny i cierpliwy, wszystko wyjaśnia krok po kroku. Nowe klientki przyszły już w pierwszym tygodniu!",
       image: beautyStudioNowySacz,
       stats: [
         { icon: Users, label: "Rezerwacje", value: "31" },
@@ -80,10 +80,10 @@ const CaseStudies = () => {
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-12 sm:mb-16 animate-fade-in px-0 sm:px-4">
           <h2 className="text-[2rem] leading-[1.2] sm:text-4xl md:text-5xl font-bold text-white mb-5 sm:mb-4">
-            Co mówią nasze <span className="text-gradient-pink">klientki</span>
+            Prawdziwe <span className="text-gradient-pink">historie</span>
           </h2>
           <p className="text-base leading-relaxed sm:text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
-            Prawdziwe wyniki salonów, z którymi współpracujemy
+            Zobacz co udało nam się osiągnąć razem z naszymi klientkami
           </p>
         </div>
 
