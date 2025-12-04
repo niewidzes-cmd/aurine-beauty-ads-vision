@@ -85,24 +85,21 @@ const Testimonials = () => {
                   key={index}
                   className="w-full flex-shrink-0 px-0 sm:px-4 flex justify-center"
                 >
-                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 w-full h-[380px] sm:h-[340px] flex flex-col">
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 w-full">
                     {/* Stars */}
-                    <div className="flex gap-1 justify-center mb-4 flex-shrink-0">
+                    <div className="flex gap-1 justify-center mb-6">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
                       ))}
                     </div>
 
                     {/* Review text */}
-                    <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed text-center">
+                    <p className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed text-center mb-6">
                       "{testimonial.text}"
                     </p>
 
-                    {/* Spacer */}
-                    <div className="flex-1" />
-
                     {/* Author */}
-                    <div className="text-center border-t border-white/10 pt-3 sm:pt-4 flex-shrink-0">
+                    <div className="text-center border-t border-white/10 pt-4">
                       <div className="font-semibold text-white text-sm sm:text-base">
                         {testimonial.name}
                       </div>
