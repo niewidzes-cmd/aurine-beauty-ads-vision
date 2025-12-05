@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="utf-8">
+    <script>
+      // Zapisz aktualny URL
+      sessionStorage.redirect = location.href;
+      // Załaduj index.html
+      window.location.replace("/");
+    </script>
   </head>
   <body></body>
 </html>
