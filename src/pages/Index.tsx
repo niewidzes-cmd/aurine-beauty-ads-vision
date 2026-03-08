@@ -11,10 +11,12 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import BackgroundEffects from "@/components/BackgroundEffects";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black relative">
+      <BackgroundEffects />
       <Navigation />
       <Hero />
       <AboutUs />
