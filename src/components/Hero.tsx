@@ -21,18 +21,12 @@ const Hero = () => {
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/[0.08] rounded-full blur-[150px]" />
         <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-primary/[0.05] rounded-full blur-[120px]" />
         
-        {/* Floating social icons */}
-        <div className="absolute top-[15%] right-[12%] opacity-[0.06] animate-pulse" style={{ animationDuration: "4s" }}>
-          <Facebook className="w-16 h-16 sm:w-24 sm:h-24 text-primary" />
+        {/* Floating social icons - hidden on small mobile, subtle on larger */}
+        <div className="hidden sm:block absolute top-[12%] right-[8%] opacity-[0.04] animate-pulse" style={{ animationDuration: "6s" }}>
+          <Facebook className="w-20 h-20 lg:w-28 lg:h-28 text-primary" />
         </div>
-        <div className="absolute bottom-[25%] left-[8%] opacity-[0.05] animate-pulse" style={{ animationDuration: "5s", animationDelay: "1s" }}>
-          <Instagram className="w-12 h-12 sm:w-20 sm:h-20 text-primary" />
-        </div>
-        <div className="absolute top-[55%] right-[25%] opacity-[0.04] animate-pulse" style={{ animationDuration: "6s", animationDelay: "2s" }}>
-          <Facebook className="w-10 h-10 sm:w-14 sm:h-14 text-primary" />
-        </div>
-        <div className="absolute top-[35%] left-[20%] opacity-[0.03] animate-pulse" style={{ animationDuration: "7s", animationDelay: "3s" }}>
-          <Instagram className="w-8 h-8 sm:w-12 sm:h-12 text-primary" />
+        <div className="hidden sm:block absolute bottom-[20%] left-[5%] opacity-[0.03] animate-pulse" style={{ animationDuration: "8s", animationDelay: "2s" }}>
+          <Instagram className="w-16 h-16 lg:w-24 lg:h-24 text-primary" />
         </div>
         
         {/* Decorative dots grid */}
