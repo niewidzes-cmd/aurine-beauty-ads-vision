@@ -1,10 +1,9 @@
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { ref, isVisible } = useScrollAnimation();
 
   const testimonials = [
     { name: "Wioletta S.", business: "Salon kosmetyczny - Grodzisk Mazowiecki", text: "Z całego serca polecamy Agencję Aurine! Znakomita obsługa klienta i pełen profesjonalizm nawet w przypadku tych najmniejszych firm. Świetna współpraca, wszystko wytłumaczone krok po kroku, pierwsze efekty były po kilku dniach.", rating: 5 },
@@ -25,64 +24,71 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section ref={ref} id="testimonials" className={`section-padding bg-[#050505] relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/[0.05] blur-[100px] rounded-full" />
+    <section id="testimonials" className="section-padding bg-[#050505] relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/[0.04] blur-[120px] rounded-full" />
 
       <div className="max-w-3xl mx-auto relative z-10">
-        <div className="text-center mb-8 sm:mb-10 animate-fade-in">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-8 sm:mb-12"
+        >
           <h2 className="text-2xl leading-tight sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Opinie <span className="text-gradient-pink">klientek</span>
           </h2>
-          <p className="text-sm leading-relaxed sm:text-base text-white/55 max-w-xl mx-auto">
+          <p className="text-sm leading-relaxed sm:text-base text-white/50 max-w-xl mx-auto">
             Właścicielki salonów, które nam zaufały
           </p>
-        </div>
+        </motion.div>
 
         <div className="relative">
           {/* Big quote mark */}
-          <div className="absolute -top-2 left-1/2 -translate-x-1/2 opacity-[0.06]">
-            <Quote className="w-16 h-16 text-primary" />
+          <div className="absolute -top-2 left-1/2 -translate-x-1/2 opacity-[0.04]">
+            <Quote className="w-20 h-20 text-primary" />
           </div>
 
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-2 sm:px-6">
-                  <div className="text-center py-6">
-                    <div className="flex gap-0.5 mb-5 justify-center">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-primary text-primary" />
-                      ))}
-                    </div>
-                    <p className="text-sm sm:text-base text-white/75 mb-6 leading-relaxed italic max-w-2xl mx-auto">
-                      "{testimonial.text}"
-                    </p>
-                    <div>
-                      <div className="font-semibold text-white text-sm">{testimonial.name}</div>
-                      <div className="text-xs text-white/40">{testimonial.business}</div>
-                    </div>
-                  </div>
+          <div className="min-h-[220px] sm:min-h-[200px] flex items-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 30 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -30 }}
+                transition={{ duration: 0.35 }}
+                className="w-full text-center px-8 sm:px-12"
+              >
+                <div className="flex gap-0.5 mb-5 justify-center">
+                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-primary text-primary" />
+                  ))}
                 </div>
-              ))}
-            </div>
+                <p className="text-sm sm:text-base text-white/70 mb-6 leading-relaxed italic max-w-2xl mx-auto">
+                  "{testimonials[currentIndex].text}"
+                </p>
+                <div>
+                  <div className="font-semibold text-white text-sm">{testimonials[currentIndex].name}</div>
+                  <div className="text-xs text-white/35">{testimonials[currentIndex].business}</div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
 
-          <button onClick={prevTestimonial} className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 hover:bg-white/5 rounded-full flex items-center justify-center transition-all">
-            <ChevronLeft className="w-4 h-4 text-white/40 hover:text-white transition-colors" />
+          <button onClick={prevTestimonial} className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 hover:bg-white/5 rounded-full flex items-center justify-center transition-all">
+            <ChevronLeft className="w-4 h-4 text-white/30 hover:text-white/60 transition-colors" />
           </button>
-          <button onClick={nextTestimonial} className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 hover:bg-white/5 rounded-full flex items-center justify-center transition-all">
-            <ChevronRight className="w-4 h-4 text-white/40 hover:text-white transition-colors" />
+          <button onClick={nextTestimonial} className="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 hover:bg-white/5 rounded-full flex items-center justify-center transition-all">
+            <ChevronRight className="w-4 h-4 text-white/30 hover:text-white/60 transition-colors" />
           </button>
 
-          <div className="flex justify-center gap-1.5 mt-5">
+          <div className="flex justify-center gap-1.5 mt-6">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-1.5 rounded-full transition-all ${index === currentIndex ? "w-6 bg-primary" : "w-1.5 bg-white/15 hover:bg-white/30"}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${index === currentIndex ? "w-6 bg-primary" : "w-1.5 bg-white/15 hover:bg-white/30"}`}
               />
             ))}
           </div>

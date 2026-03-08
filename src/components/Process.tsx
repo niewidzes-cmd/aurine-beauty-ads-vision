@@ -1,8 +1,7 @@
 import { MessageSquare, LineChart, Palette, Rocket } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { motion } from "framer-motion";
 
 const Process = () => {
-  const { ref, isVisible } = useScrollAnimation();
   const steps = [
     { icon: MessageSquare, number: "01", title: "Rozmowa i strategia", description: "Poznajemy Twój salon, usługi i cele. Ustalamy budżet i plan działania." },
     { icon: Palette, number: "02", title: "Kreacje reklamowe", description: "Tworzymy grafiki i teksty dopasowane do Twojego salonu." },
@@ -11,55 +10,75 @@ const Process = () => {
   ];
 
   return (
-    <section ref={ref} id="process" className={`section-padding bg-[#060606] relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      {/* Decorative dots */}
-      <div className="absolute top-[15%] right-[8%] grid grid-cols-3 gap-1.5 opacity-[0.06]">
-        {[...Array(9)].map((_, i) => <div key={i} className="w-1 h-1 bg-primary rounded-full" />)}
-      </div>
+    <section id="process" className="section-padding bg-[#060606] relative overflow-hidden">
+      {/* Top gradient line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
+      <div className="absolute bottom-0 left-1/3 w-64 h-64 bg-primary/[0.03] blur-[100px] rounded-full" />
 
-      <div className="max-w-5xl mx-auto relative z-10">
-        <div className="text-center mb-10 sm:mb-14">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-12 sm:mb-16"
+        >
           <h2 className="text-2xl leading-tight sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Jak to <span className="text-gradient-pink">wygląda</span>
           </h2>
-          <p className="text-sm leading-relaxed sm:text-base text-white/55 max-w-xl mx-auto">
+          <p className="text-sm leading-relaxed sm:text-base text-white/50 max-w-xl mx-auto">
             Od pierwszej rozmowy do wymiernych efektów
           </p>
-        </div>
+        </motion.div>
 
-        {/* Steps - alternating card/open */}
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
-          {steps.map((step, index) => {
-            const isCard = index === 0 || index === 3;
-            return (
-              <div
-                key={index}
-                className={`animate-fade-in-up group ${
-                  isCard 
-                    ? "bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 hover:border-primary/25 transition-all duration-500"
-                    : "p-5 sm:p-6"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 relative">
-                    <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                      isCard ? "bg-primary/15 group-hover:bg-primary/25" : "bg-white/[0.05] group-hover:bg-primary/10"
-                    }`}>
-                      <step.icon className="w-5 h-5 text-primary" />
-                    </div>
-                    <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-primary rounded-full flex items-center justify-center text-[9px] font-bold text-white">
-                      {step.number}
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/30 via-primary/10 to-transparent" />
+
+          <div className="space-y-6 sm:space-y-8 md:space-y-0">
+            {steps.map((step, index) => {
+              const isLeft = index % 2 === 0;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className={`md:flex md:items-center md:gap-8 ${isLeft ? "md:flex-row" : "md:flex-row-reverse"} md:py-8`}
+                >
+                  {/* Content */}
+                  <div className={`md:w-[calc(50%-2rem)] ${isLeft ? "md:text-right" : "md:text-left"}`}>
+                    <div className={`bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 sm:p-5 group hover:border-primary/20 transition-all duration-500 hover:bg-white/[0.05] ${isLeft ? "md:ml-auto" : "md:mr-auto"} max-w-sm`}>
+                      <div className={`flex items-center gap-3 mb-2 ${isLeft ? "md:flex-row-reverse" : ""}`}>
+                        <div className="w-9 h-9 bg-primary/15 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                          <step.icon className="w-4 h-4 text-primary" />
+                        </div>
+                        <h3 className="text-sm sm:text-base font-semibold text-white">{step.title}</h3>
+                      </div>
+                      <p className="text-xs sm:text-sm leading-relaxed text-white/45">{step.description}</p>
                     </div>
                   </div>
-                  <div className="pt-1">
-                    <h3 className="text-sm sm:text-base font-semibold text-white mb-1.5">{step.title}</h3>
-                    <p className="text-xs sm:text-sm leading-relaxed text-white/50">{step.description}</p>
+
+                  {/* Center dot */}
+                  <div className="hidden md:flex items-center justify-center relative">
+                    <motion.div
+                      whileInView={{ scale: [0, 1] }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.15 + 0.3 }}
+                      className="w-10 h-10 bg-black border-2 border-primary/40 rounded-full flex items-center justify-center z-10"
+                    >
+                      <span className="text-xs font-bold text-primary">{step.number}</span>
+                    </motion.div>
                   </div>
-                </div>
-              </div>
-            );
-          })}
+
+                  {/* Spacer for the other side */}
+                  <div className="hidden md:block md:w-[calc(50%-2rem)]" />
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
