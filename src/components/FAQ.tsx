@@ -27,22 +27,23 @@ const FAQ = () => {
           </p>
         </div>
 
-        <div className="space-y-2 sm:space-y-3">
+        {/* Clean divider-based FAQ, no cards */}
+        <div className="divide-y divide-white/[0.08]">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white/[0.03] border border-white/[0.06] rounded-lg overflow-hidden hover:border-primary/20 transition-all animate-fade-in-up"
+              className="animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-3.5 sm:p-4 text-left"
+                className="w-full flex items-center justify-between py-4 sm:py-5 text-left group"
               >
-                <span className="text-sm sm:text-base font-semibold text-white pr-3">{faq.question}</span>
-                <ChevronDown className={`w-4 h-4 text-primary flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />
+                <span className="text-sm sm:text-base font-semibold text-white pr-3 group-hover:text-primary transition-colors">{faq.question}</span>
+                <ChevronDown className={`w-4 h-4 text-white/40 flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180 text-primary" : ""}`} />
               </button>
               {openIndex === index && (
-                <div className="px-3.5 sm:px-4 pb-3.5 sm:pb-4 text-xs sm:text-sm leading-relaxed text-white/60 animate-fade-in">
+                <div className="pb-4 sm:pb-5 text-xs sm:text-sm leading-relaxed text-white/55 animate-fade-in">
                   {faq.answer}
                 </div>
               )}
@@ -51,7 +52,7 @@ const FAQ = () => {
         </div>
 
         <div className="mt-8 text-center">
-          <p className="text-white/50 mb-3 text-xs sm:text-sm">Masz inne pytanie?</p>
+          <p className="text-white/45 mb-3 text-xs sm:text-sm">Masz inne pytanie?</p>
           <button
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             className="text-primary hover:text-primary/80 font-semibold transition-colors text-sm"

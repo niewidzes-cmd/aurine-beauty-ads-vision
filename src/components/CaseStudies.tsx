@@ -60,7 +60,7 @@ const CaseStudies = () => {
     <section ref={ref} id="case-studies" className={`section-padding bg-[#070707] relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/8 blur-3xl rounded-full" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-10 animate-fade-in">
           <h2 className="text-2xl leading-tight sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Prawdziwe <span className="text-gradient-pink">historie</span>
@@ -70,8 +70,8 @@ const CaseStudies = () => {
           </p>
         </div>
 
-        {/* Case study selector */}
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
+        {/* Case study selector - pill style */}
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
           {caseStudies.map((study, index) => (
             <button
               key={index}
@@ -79,7 +79,7 @@ const CaseStudies = () => {
               className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-medium transition-all text-xs sm:text-sm ${
                 activeCase === index
                   ? "bg-primary text-white shadow-[0_0_15px_hsl(328,100%,54%/0.3)]"
-                  : "bg-white/5 text-white/50 hover:bg-white/10 hover:text-white border border-white/[0.08]"
+                  : "text-white/50 hover:text-white border-b border-transparent hover:border-white/20"
               }`}
             >
               {study.salon}
@@ -88,62 +88,65 @@ const CaseStudies = () => {
         </div>
 
         {/* Case study content */}
-        <div key={activeCase} className="grid lg:grid-cols-2 gap-4 sm:gap-6 items-start animate-fade-in">
-          {/* Left column */}
-          <div className="space-y-3 sm:space-y-4">
-            <div className="bg-white/[0.03] border border-white/[0.06] rounded-xl overflow-hidden hover:border-primary/30 transition-all duration-500 group cursor-pointer">
-              <img src={currentCase.image} alt={`Case study ${currentCase.salon}`} className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500" />
-            </div>
-            <div className="grid grid-cols-3 gap-2 sm:gap-3">
-              {currentCase.stats.map((stat, index) => (
-                <div key={index} className="bg-white/[0.06] border border-white/[0.08] rounded-lg p-2.5 sm:p-3 text-center hover:border-primary/40 transition-all">
-                  <stat.icon className="w-4 h-4 text-primary mx-auto mb-1.5" />
-                  <div className="text-base sm:text-lg font-bold text-white">{stat.value}</div>
-                  <div className="text-[9px] sm:text-xs text-white/50">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+        <div key={activeCase} className="animate-fade-in">
+          {/* Image */}
+          <div className="mb-6 sm:mb-8 rounded-xl overflow-hidden">
+            <img src={currentCase.image} alt={`Case study ${currentCase.salon}`} className="w-full h-auto" />
           </div>
 
-          {/* Right column */}
-          <div className="space-y-3 sm:space-y-4">
+          {/* Stats row - big numbers, no cards */}
+          <div className="grid grid-cols-3 text-center mb-8 sm:mb-10">
+            {currentCase.stats.map((stat, index) => (
+              <div key={index} className="py-3">
+                <div className="text-xl sm:text-3xl font-bold text-white glow-pink">{stat.value}</div>
+                <div className="text-[10px] sm:text-xs text-white/50 mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Details - clean layout */}
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-8">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">{currentCase.salon}</h3>
-              <p className="text-white/50 text-sm">Właścicielka: {currentCase.owner}</p>
-            </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{currentCase.salon}</h3>
+              <p className="text-white/50 text-sm mb-5">Właścicielka: {currentCase.owner}</p>
 
-            <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-4 hover:border-primary/20 transition-all group">
-              <h4 className="text-primary font-semibold mb-1.5 flex items-center gap-1.5 text-sm">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                Wyzwanie
-              </h4>
-              <p className="text-white/70 text-sm">{currentCase.challenge}</p>
-            </div>
-
-            <div className="bg-white/[0.03] border border-white/[0.06] rounded-lg p-4 hover:border-primary/20 transition-all group">
-              <h4 className="text-primary font-semibold mb-1.5 flex items-center gap-1.5 text-sm">
-                <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                Nasze rozwiązanie
-              </h4>
-              <p className="text-white/70 text-sm">{currentCase.solution}</p>
-            </div>
-
-            <div className="bg-gradient-to-br from-primary/15 to-primary/5 border border-primary/20 rounded-lg p-4">
-              <h4 className="text-white font-semibold mb-2 text-sm">Wyniki kampanii:</h4>
-              <div className="space-y-1.5">
-                {[currentCase.results.clients, `${currentCase.results.revenue} przychodu`, currentCase.results.roi].map((r, i) => (
-                  <div key={i} className="flex items-center gap-1.5">
-                    <ChevronRight className="w-3.5 h-3.5 text-primary" />
-                    <span className="text-white text-sm">{r}</span>
-                  </div>
-                ))}
-                <div className="text-white/50 text-xs mt-2">{currentCase.results.period}</div>
+              <div className="space-y-5">
+                <div>
+                  <h4 className="text-primary font-semibold mb-1.5 text-sm flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    Wyzwanie
+                  </h4>
+                  <p className="text-white/65 text-sm">{currentCase.challenge}</p>
+                </div>
+                <div>
+                  <h4 className="text-primary font-semibold mb-1.5 text-sm flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    Nasze rozwiązanie
+                  </h4>
+                  <p className="text-white/65 text-sm">{currentCase.solution}</p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white/[0.06] border border-white/[0.08] rounded-lg p-4 italic">
-              <p className="text-white/85 leading-relaxed text-sm">"{currentCase.testimonial}"</p>
-              <p className="text-primary font-semibold mt-3 text-sm">– {currentCase.owner}</p>
+            <div>
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3 text-sm">Wyniki kampanii:</h4>
+                <div className="space-y-2">
+                  {[currentCase.results.clients, `${currentCase.results.revenue} przychodu`, currentCase.results.roi].map((r, i) => (
+                    <div key={i} className="flex items-center gap-2">
+                      <ChevronRight className="w-3.5 h-3.5 text-primary flex-shrink-0" />
+                      <span className="text-white/80 text-sm">{r}</span>
+                    </div>
+                  ))}
+                  <div className="text-white/40 text-xs mt-2">{currentCase.results.period}</div>
+                </div>
+              </div>
+
+              {/* Testimonial - accent border only */}
+              <blockquote className="border-l-2 border-primary pl-4">
+                <p className="text-white/80 leading-relaxed text-sm italic">"{currentCase.testimonial}"</p>
+                <p className="text-primary font-semibold mt-2 text-sm">– {currentCase.owner}</p>
+              </blockquote>
             </div>
           </div>
         </div>
