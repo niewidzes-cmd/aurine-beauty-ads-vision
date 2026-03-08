@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TrendingUp, Users, DollarSign, ChevronRight } from "lucide-react";
+import { TrendingUp, Users, DollarSign, ChevronRight, Instagram } from "lucide-react";
 import salonBeautyOstrow from "@/assets/case-study-salon-beauty.png";
 import studioMlawa from "@/assets/case-study-studio-mlawa.png";
 import beautyStudioNowySacz from "@/assets/case-study-beauty-studio-nowy-sacz.png";
@@ -58,19 +58,22 @@ const CaseStudies = () => {
 
   return (
     <section ref={ref} id="case-studies" className={`section-padding bg-[#070707] relative overflow-hidden transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-      <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/8 blur-3xl rounded-full" />
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/[0.05] blur-[100px] rounded-full" />
+      <div className="absolute bottom-[10%] right-[5%] opacity-[0.03]">
+        <Instagram className="w-16 h-16 text-primary" />
+      </div>
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-10 animate-fade-in">
           <h2 className="text-2xl leading-tight sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
             Prawdziwe <span className="text-gradient-pink">historie</span>
           </h2>
-          <p className="text-sm leading-relaxed sm:text-base text-white/60 max-w-xl mx-auto">
+          <p className="text-sm leading-relaxed sm:text-base text-white/55 max-w-xl mx-auto">
             Zobacz co udało nam się osiągnąć razem z naszymi klientkami
           </p>
         </div>
 
-        {/* Case study selector - pill style */}
+        {/* Case study selector */}
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
           {caseStudies.map((study, index) => (
             <button
@@ -78,8 +81,8 @@ const CaseStudies = () => {
               onClick={() => setActiveCase(index)}
               className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full font-medium transition-all text-xs sm:text-sm ${
                 activeCase === index
-                  ? "bg-primary text-white shadow-[0_0_15px_hsl(328,100%,54%/0.3)]"
-                  : "text-white/50 hover:text-white border-b border-transparent hover:border-white/20"
+                  ? "bg-primary text-white shadow-[0_0_20px_hsl(328,100%,54%/0.3)]"
+                  : "text-white/45 hover:text-white/70 border border-white/[0.08] hover:border-white/20"
               }`}
             >
               {study.salon}
@@ -89,26 +92,26 @@ const CaseStudies = () => {
 
         {/* Case study content */}
         <div key={activeCase} className="animate-fade-in">
-          {/* Image */}
-          <div className="mb-6 sm:mb-8 rounded-xl overflow-hidden">
+          {/* Image in card */}
+          <div className="rounded-2xl overflow-hidden border border-white/[0.06] mb-6 sm:mb-8 hover:border-primary/20 transition-all duration-500">
             <img src={currentCase.image} alt={`Case study ${currentCase.salon}`} className="w-full h-auto" />
           </div>
 
-          {/* Stats row - big numbers, no cards */}
+          {/* Stats row - open */}
           <div className="grid grid-cols-3 text-center mb-8 sm:mb-10">
             {currentCase.stats.map((stat, index) => (
               <div key={index} className="py-3">
                 <div className="text-xl sm:text-3xl font-bold text-white glow-pink">{stat.value}</div>
-                <div className="text-[10px] sm:text-xs text-white/50 mt-1">{stat.label}</div>
+                <div className="text-[10px] sm:text-xs text-white/40 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          {/* Details - clean layout */}
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-10 mb-8">
+          {/* Details */}
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-10">
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{currentCase.salon}</h3>
-              <p className="text-white/50 text-sm mb-5">Właścicielka: {currentCase.owner}</p>
+              <p className="text-white/45 text-sm mb-6">Właścicielka: {currentCase.owner}</p>
 
               <div className="space-y-5">
                 <div>
@@ -116,20 +119,21 @@ const CaseStudies = () => {
                     <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                     Wyzwanie
                   </h4>
-                  <p className="text-white/65 text-sm">{currentCase.challenge}</p>
+                  <p className="text-white/60 text-sm">{currentCase.challenge}</p>
                 </div>
                 <div>
                   <h4 className="text-primary font-semibold mb-1.5 text-sm flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 bg-primary rounded-full" />
                     Nasze rozwiązanie
                   </h4>
-                  <p className="text-white/65 text-sm">{currentCase.solution}</p>
+                  <p className="text-white/60 text-sm">{currentCase.solution}</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <div className="mb-6">
+              {/* Results in card */}
+              <div className="bg-gradient-to-br from-primary/[0.1] to-primary/[0.03] border border-primary/20 rounded-xl p-4 sm:p-5 mb-5">
                 <h4 className="text-white font-semibold mb-3 text-sm">Wyniki kampanii:</h4>
                 <div className="space-y-2">
                   {[currentCase.results.clients, `${currentCase.results.revenue} przychodu`, currentCase.results.roi].map((r, i) => (
@@ -138,13 +142,13 @@ const CaseStudies = () => {
                       <span className="text-white/80 text-sm">{r}</span>
                     </div>
                   ))}
-                  <div className="text-white/40 text-xs mt-2">{currentCase.results.period}</div>
+                  <div className="text-white/35 text-xs mt-2">{currentCase.results.period}</div>
                 </div>
               </div>
 
-              {/* Testimonial - accent border only */}
+              {/* Testimonial - open with border accent */}
               <blockquote className="border-l-2 border-primary pl-4">
-                <p className="text-white/80 leading-relaxed text-sm italic">"{currentCase.testimonial}"</p>
+                <p className="text-white/75 leading-relaxed text-sm italic">"{currentCase.testimonial}"</p>
                 <p className="text-primary font-semibold mt-2 text-sm">– {currentCase.owner}</p>
               </blockquote>
             </div>
