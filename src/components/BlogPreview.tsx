@@ -13,7 +13,7 @@ const BlogPreview = () => {
 
   return (
     <section ref={ref} id="blog" className={`section-padding bg-black relative overflow-hidden transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-10 animate-fade-in">
           <div className="inline-flex items-center gap-1.5 bg-primary/10 border border-primary/15 rounded-full px-3 py-1 mb-4">
             <BookOpen className="w-3.5 h-3.5 text-primary" />
@@ -27,25 +27,22 @@ const BlogPreview = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 mb-8">
+        {/* Clean list layout */}
+        <div className="divide-y divide-white/[0.06] mb-8">
           {articles.map((article, index) => (
             <Link
               key={index}
               to={`/porady/${article.slug}`}
-              className="group bg-white/[0.03] border border-white/[0.06] rounded-xl p-4 sm:p-5 hover:border-primary/30 transition-all duration-300 animate-fade-in-up"
+              className="group flex items-start justify-between gap-4 py-5 sm:py-6 animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start justify-between mb-3">
-                <div className="bg-primary/10 p-1.5 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <BookOpen className="w-4 h-4 text-primary" />
-                </div>
-                <span className="text-[10px] sm:text-xs text-white/40">{article.readTime}</span>
+              <div className="flex-1">
+                <h3 className="text-sm sm:text-base font-semibold text-white mb-1.5 group-hover:text-primary transition-colors">{article.title}</h3>
+                <p className="text-white/50 text-xs sm:text-sm leading-relaxed">{article.description}</p>
               </div>
-              <h3 className="text-sm sm:text-base font-semibold text-white mb-2 group-hover:text-primary transition-colors">{article.title}</h3>
-              <p className="text-white/60 text-xs sm:text-sm leading-relaxed mb-3">{article.description}</p>
-              <div className="flex items-center gap-1.5 text-primary text-xs font-medium">
-                Czytaj więcej
-                <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+              <div className="flex items-center gap-2 flex-shrink-0 pt-1">
+                <span className="text-[10px] sm:text-xs text-white/30">{article.readTime}</span>
+                <ArrowRight className="w-4 h-4 text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
               </div>
             </Link>
           ))}

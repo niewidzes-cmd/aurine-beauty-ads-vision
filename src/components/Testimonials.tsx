@@ -80,19 +80,19 @@ const Testimonials = () => {
               style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-1 sm:px-2">
-                  <div className="bg-white/[0.05] border border-white/[0.08] rounded-xl p-4 sm:p-6">
-                    <div className="flex gap-0.5 mb-3 justify-center">
+                <div key={index} className="w-full flex-shrink-0 px-1 sm:px-4">
+                  <div className="text-center py-4">
+                    <div className="flex gap-0.5 mb-4 justify-center">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-primary text-primary" />
                       ))}
                     </div>
-                    <p className="text-xs sm:text-sm text-white/85 mb-4 leading-relaxed text-center">
+                    <p className="text-sm sm:text-base text-white/80 mb-6 leading-relaxed italic max-w-2xl mx-auto">
                       "{testimonial.text}"
                     </p>
-                    <div className="text-center border-t border-white/[0.06] pt-3">
+                    <div>
                       <div className="font-semibold text-white text-sm">{testimonial.name}</div>
-                      <div className="text-xs text-white/50">{testimonial.business}</div>
+                      <div className="text-xs text-white/45">{testimonial.business}</div>
                     </div>
                   </div>
                 </div>
@@ -100,11 +100,11 @@ const Testimonials = () => {
             </div>
           </div>
 
-          <button onClick={prevTestimonial} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-3 w-8 h-8 sm:w-10 sm:h-10 bg-white/5 hover:bg-primary/20 border border-white/[0.08] rounded-full flex items-center justify-center transition-all">
-            <ChevronLeft className="w-4 h-4 text-white" />
+          <button onClick={prevTestimonial} className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 sm:-translate-x-3 w-8 h-8 sm:w-10 sm:h-10 hover:bg-white/5 rounded-full flex items-center justify-center transition-all">
+            <ChevronLeft className="w-4 h-4 text-white/50 hover:text-white" />
           </button>
-          <button onClick={nextTestimonial} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-3 w-8 h-8 sm:w-10 sm:h-10 bg-white/5 hover:bg-primary/20 border border-white/[0.08] rounded-full flex items-center justify-center transition-all">
-            <ChevronRight className="w-4 h-4 text-white" />
+          <button onClick={nextTestimonial} className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 sm:translate-x-3 w-8 h-8 sm:w-10 sm:h-10 hover:bg-white/5 rounded-full flex items-center justify-center transition-all">
+            <ChevronRight className="w-4 h-4 text-white/50 hover:text-white" />
           </button>
 
           <div className="flex justify-center gap-1.5 mt-5">
